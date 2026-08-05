@@ -25,6 +25,10 @@ export default function RoyalMusicPage() {
         title="Atmósferas musicales reales."
         text="Sonido definido, interpretación cuidada y una experiencia cercana que conecta con cada momento del evento."
         breadcrumbs={[{ label: "Royal Music" }]}
+        image="/media/ae-live-event.jpg"
+        imageAlt="Adrián Eugenio durante una presentación con el logotipo Royal Music en pantalla."
+        imagePosition="center"
+        imageFit="contain"
       />
 
       <section className="section">

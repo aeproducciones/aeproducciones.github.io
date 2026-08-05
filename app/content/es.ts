@@ -88,7 +88,7 @@ export const solutionPages = {
     image: "/media/selection-web/ae-033-formal-reception.webp",
     imageAlt: "Presentación musical frente a los invitados de una recepción.",
     imagePosition: "center 58%",
-    imageFit: "contain",
+    imageFit: "cover",
     points: ["Ceremonias", "Recepciones", "Cenas", "Momentos especiales"],
     source: "Dossier, p. 19",
   },
@@ -100,7 +100,7 @@ export const solutionPages = {
     image: "/media/selection-web/ae-036-trio-outdoor.webp",
     imageAlt: "Trío acústico durante una presentación al aire libre.",
     imagePosition: "center",
-    imageFit: "contain",
+    imageFit: "cover",
     points: [
       "Programaciones musicales",
       "Temporadas acústicas",
@@ -162,7 +162,7 @@ export const formatPages = {
     image: "/media/selection-web/ae-039-royal-trio.webp",
     imageAlt: "Royal Trío durante una presentación en vivo.",
     imagePosition: "center",
-    imageFit: "contain",
+    imageFit: "cover",
     intro: "Sonido claro, moderno y bien definido.",
     description:
       "Formato acústico con un carácter cálido y contemporáneo. Recorre repertorios románticos, baladas, música latina suave, oldies, pop en inglés y español y clásicos internacionales.",
