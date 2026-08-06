@@ -6,7 +6,6 @@ import {
   FinalCta,
   ReservationProcess,
   SectionHeading,
-  SourceNote,
 } from "@/app/components/ui";
 import {
   homeEvidenceItems,
@@ -91,7 +90,6 @@ export default function HomePage() {
               inolvidable, donde el escenario, la interpretación y la
               musicalidad se integran con rigor técnico y solidez artística.
             </p>
-            <SourceNote>Dossier, p. 2</SourceNote>
           </div>
         </div>
       </section>
@@ -128,7 +126,6 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-          <SourceNote>Dossier, p. 19</SourceNote>
         </div>
       </section>
 
@@ -147,7 +144,6 @@ export default function HomePage() {
               Música en vivo con sonido profesional, presencia escénica y una
               ejecución cuidada en cada detalle.
             </p>
-            <SourceNote>Dossier, p. 6</SourceNote>
           </div>
         </div>
         <div className="container format-grid">
@@ -219,7 +215,6 @@ export default function HomePage() {
               unoptimized
             />
           </figure>
-          <SourceNote>Dossier, pp. 13-15</SourceNote>
         </div>
       </section>
 
@@ -261,7 +256,6 @@ export default function HomePage() {
             title="Transparencia, seguridad y certeza operativa."
           />
           <ReservationProcess />
-          <SourceNote>Dossier, pp. 2 y 21</SourceNote>
         </div>
       </section>
 

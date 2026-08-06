@@ -5,7 +5,6 @@ import {
   FinalCta,
   PageHero,
   SectionHeading,
-  SourceNote,
 } from "@/app/components/ui";
 import { royalFormats } from "@/app/content/es";
 import { whatsappMessages } from "@/app/lib/site-config";
@@ -46,7 +45,6 @@ export default function RoyalMusicPage() {
               Propuestas para bodas, cócteles, cenas privadas y eventos
               especiales con un estilo limpio, moderno y con carácter.
             </p>
-            <SourceNote>Dossier, p. 6</SourceNote>
           </div>
         </div>
       </section>
@@ -94,7 +92,6 @@ export default function RoyalMusicPage() {
             definido y una experiencia cercana que conecte con cada momento del
             evento.
           </p>
-          <SourceNote>Dossier, p. 6</SourceNote>
         </div>
       </section>
 

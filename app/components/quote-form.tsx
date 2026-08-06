@@ -45,6 +45,26 @@ export function QuoteForm() {
 
     setServiceError("");
     const services = selectedServices.join(", ");
+    const crmEndpoint =
+      process.env.NEXT_PUBLIC_CRM_ENDPOINT ??
+      "https://ae-producciones-queretaro.adrian-eugenio.chatgpt.site";
+    const crmRequest = fetch(`${crmEndpoint}/api/crm/intake`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        name: data.get("name"),
+        contact: data.get("contact"),
+        email: data.get("email"),
+        instagram: data.get("instagram"),
+        facebook: data.get("facebook"),
+        services: selectedServices,
+        eventType: data.get("eventType"),
+        date: data.get("date"),
+        location: data.get("location"),
+        details: data.get("details"),
+        consent: data.get("consent") === "on",
+      }),
+    });
     const message = [
       "Hola, vi el sitio de AE Producciones y quiero solicitar una propuesta.",
       "",
@@ -57,12 +77,17 @@ export function QuoteForm() {
       `Detalles: ${data.get("details") || "Por conversar"}`,
     ].join("\n");
 
-    setStatus("La solicitud está preparada. Se abrirá WhatsApp para enviarla.");
+    setStatus("La solicitud está registrada. Se abrirá WhatsApp para continuar.");
     window.open(
       `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(message)}`,
       "_blank",
       "noopener,noreferrer",
     );
+    crmRequest.then((response) => {
+      if (!response.ok) setStatus("WhatsApp está listo. La solicitud requiere revisión técnica.");
+    }).catch(() => {
+      setStatus("WhatsApp está listo. La solicitud requiere revisión técnica.");
+    });
   }
 
   return (
@@ -81,6 +106,21 @@ export function QuoteForm() {
             placeholder="442 000 0000"
             required
           />
+        </label>
+      </div>
+
+      <div className="form-grid">
+        <label>
+          <span>Correo electrónico (opcional)</span>
+          <input name="email" type="email" autoComplete="email" />
+        </label>
+        <label>
+          <span>Instagram (opcional)</span>
+          <input name="instagram" autoComplete="off" placeholder="@usuario" />
+        </label>
+        <label>
+          <span>Facebook (opcional)</span>
+          <input name="facebook" autoComplete="off" />
         </label>
       </div>
 
@@ -164,8 +204,8 @@ export function QuoteForm() {
       </label>
 
       <p className="privacy-note">
-        El sitio no almacena estos campos. La información se prepara en tu
-        navegador y se envía únicamente cuando confirmas en WhatsApp.
+      La solicitud se registra de forma segura para dar seguimiento. WhatsApp
+      se abrirá para continuar la conversación.
       </p>
       <button className="button button-dark form-submit" type="submit">
         Continuar por WhatsApp

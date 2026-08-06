@@ -3,7 +3,6 @@ import { QuoteForm } from "@/app/components/quote-form";
 import {
   PageHero,
   ReservationProcess,
-  SourceNote,
 } from "@/app/components/ui";
 import { siteConfig } from "@/app/lib/site-config";
 
@@ -32,7 +31,6 @@ export default function QuotePage() {
               {siteConfig.whatsappDisplay}
             </a>
             <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
-            <SourceNote>Dossier, pp. 2, 21 y 22</SourceNote>
           </div>
           <QuoteForm />
         </div>

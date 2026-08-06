@@ -155,24 +155,6 @@ export function SectionHeading({
   );
 }
 
-export function SourceNote({ children }: { children: React.ReactNode }) {
-  void children;
-  return null;
-}
-
-export function MediaPlaceholder({
-  label = "Evidencia pendiente",
-}: {
-  label?: string;
-}) {
-  return (
-    <div className="media-placeholder" role="note">
-      <span>{label}</span>
-      <p>Material técnico pendiente de incorporación.</p>
-    </div>
-  );
-}
-
 export function ReservationProcess() {
   const steps = [
     [

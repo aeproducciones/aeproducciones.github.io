@@ -3,7 +3,6 @@ import Image from "next/image";
 import {
   FinalCta,
   PageHero,
-  SourceNote,
 } from "@/app/components/ui";
 import { whatsappMessages } from "@/app/lib/site-config";
 
@@ -53,7 +52,6 @@ export default function ServicesPage() {
               Un registro fiel del show en vivo que conserva la interpretación,
               el sonido del ensamble y la atmósfera del momento.
             </p>
-            <SourceNote>Dossier, p. 14</SourceNote>
           </div>
           <div>
             <p>
@@ -81,7 +79,6 @@ export default function ServicesPage() {
               Un sistema de audio estable, equilibrado y adaptado al espacio del
               evento.
             </p>
-            <SourceNote>Dossier, p. 15</SourceNote>
           </div>
           <div>
             <p>

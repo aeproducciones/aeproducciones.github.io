@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import {
   FinalCta,
   PageHero,
-  SourceNote,
 } from "@/app/components/ui";
 import { formatPages } from "@/app/content/es";
 
@@ -67,7 +66,6 @@ export default async function FormatPage({
           <div>
             <p className="eyebrow">Formato</p>
             <h2>{format.title}</h2>
-            <SourceNote>{format.source}</SourceNote>
           </div>
           <div className="format-copy">
             <p className="large-copy">{format.description}</p>

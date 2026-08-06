@@ -6,7 +6,6 @@ import {
   PageHero,
   ReservationProcess,
   SectionHeading,
-  SourceNote,
 } from "@/app/components/ui";
 import { solutionPages } from "@/app/content/es";
 import { whatsappUrl } from "@/app/lib/site-config";
@@ -75,7 +74,6 @@ export default async function SolutionDetailPage({
                 <li key={point}>{point}</li>
               ))}
             </ul>
-            <SourceNote>{page.source}</SourceNote>
           </div>
         </div>
       </section>

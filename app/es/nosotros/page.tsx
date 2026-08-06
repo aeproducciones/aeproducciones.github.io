@@ -3,7 +3,6 @@ import Image from "next/image";
 import {
   FinalCta,
   PageHero,
-  SourceNote,
 } from "@/app/components/ui";
 import { values } from "@/app/content/es";
 
@@ -89,7 +88,6 @@ export default function AboutPage() {
               Su enfoque integra interpretación vocal, guitarra y un manejo
               cuidadoso del sonido.
             </p>
-            <SourceNote>Dossier, p. 4</SourceNote>
           </div>
         </div>
       </section>
@@ -116,7 +114,6 @@ export default function AboutPage() {
           </article>
         </div>
         <div className="container">
-          <SourceNote>Dossier, p. 3 · Adaptación por extensión</SourceNote>
         </div>
       </section>
 
@@ -133,7 +130,6 @@ export default function AboutPage() {
           </ul>
         </div>
         <div className="container">
-          <SourceNote>Dossier, p. 3</SourceNote>
         </div>
       </section>
 

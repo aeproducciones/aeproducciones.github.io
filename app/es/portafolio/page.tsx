@@ -3,7 +3,6 @@ import Image from "next/image";
 import {
   FinalCta,
   PageHero,
-  SourceNote,
 } from "@/app/components/ui";
 import { portfolioItems } from "@/app/content/es";
 
@@ -29,7 +28,6 @@ export default function PortfolioPage() {
             Cada participación representa una oportunidad para perfeccionar el
             sonido, la presencia y el profesionalismo que distinguen a la marca.
           </p>
-          <SourceNote>Dossier, p. 20</SourceNote>
         </div>
 
         <div className="container portfolio-grid">

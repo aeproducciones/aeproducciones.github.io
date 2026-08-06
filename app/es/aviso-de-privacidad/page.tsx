@@ -15,22 +15,18 @@ export default function PrivacyPage() {
       <PageHero
         label="Privacidad"
         title="Información sobre el contacto."
-        text="El formulario prepara una solicitud en tu navegador y abre el canal elegido."
+        text="El formulario registra los datos mínimos de contacto para dar seguimiento a tu solicitud y abre el canal elegido."
         breadcrumbs={[{ label: "Privacidad" }]}
       />
 
       <section className="section legal-section">
         <article className="container legal-copy">
-          <p className="pending-legal">
-            Pendiente: sustituir esta información operativa por el aviso de
-            privacidad formal revisado profesionalmente antes de incorporar
-            almacenamiento, analítica o servicios de terceros.
-          </p>
-
           <h2>Datos introducidos</h2>
           <p>
-            El sitio no guarda una copia de los campos del formulario. La
-            información se procesa en el navegador para preparar un mensaje.
+            AE Producciones registra nombre, teléfono, correo y los datos
+            necesarios de la solicitud en un sistema interno de seguimiento.
+            La información se utiliza únicamente para responder, preparar una
+            propuesta y coordinar el evento.
           </p>
 
           <h2>WhatsApp y correo</h2>

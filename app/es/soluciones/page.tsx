@@ -5,7 +5,6 @@ import {
   FinalCta,
   PageHero,
   SectionHeading,
-  SourceNote,
 } from "@/app/components/ui";
 import { markets } from "@/app/content/es";
 
@@ -52,7 +51,6 @@ export default function SolutionsPage() {
               </Link>
             ))}
           </div>
-          <SourceNote>Dossier, p. 19</SourceNote>
         </div>
       </section>
 

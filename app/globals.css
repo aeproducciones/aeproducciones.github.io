@@ -263,17 +263,6 @@ p {
   max-width: 42rem;
 }
 
-.source-note {
-  border-top: 1px solid currentColor;
-  color: var(--ae-mid);
-  display: inline-block;
-  font-size: 0.66rem;
-  letter-spacing: 0.03em;
-  margin: 2.25rem 0 0;
-  opacity: 0.9;
-  padding-top: 0.55rem;
-}
-
 /* Header */
 
 .site-header {
@@ -991,31 +980,6 @@ p {
   text-transform: uppercase;
 }
 
-.media-placeholder {
-  align-items: center;
-  aspect-ratio: 1.5;
-  background: var(--ae-mist);
-  border: 1px solid var(--ae-mid);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem;
-  text-align: center;
-}
-
-.media-placeholder span {
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.media-placeholder p {
-  font-size: 0.75rem;
-  margin: 1rem 0 0;
-  max-width: 22rem;
-}
-
 /* Royal Music */
 
 .royal-index > a {
@@ -1206,7 +1170,7 @@ p {
   object-fit: cover;
 }
 
-.profile-grid > div > p:not(.eyebrow, .source-note) {
+.profile-grid > div > p:not(.eyebrow) {
   max-width: 42rem;
 }
 
@@ -2204,4 +2168,194 @@ p {
 .portfolio-grid figcaption {
   border-top: 0 !important;
   border-bottom: 0 !important;
+}
+
+/* CRM: the same monochrome system, with a denser working surface. */
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.crm-shell {
+  background: var(--ae-mist);
+  min-height: 100vh;
+  padding-block: clamp(2.5rem, 6vw, 5rem);
+}
+
+.crm-container {
+  margin-inline: auto;
+  max-width: 1440px;
+  padding-inline: clamp(1rem, 4vw, 4rem);
+  width: 100%;
+}
+
+.crm-header {
+  align-items: flex-end;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.crm-header h1 {
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  margin-bottom: 0.8rem;
+}
+
+.crm-muted {
+  color: var(--ae-mid);
+  font-size: 0.9rem;
+}
+
+.crm-alert {
+  background: var(--ae-white);
+  border-left: 3px solid var(--ae-ink);
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.2rem;
+}
+
+.crm-table-wrap {
+  background: var(--ae-white);
+  overflow-x: auto;
+}
+
+.crm-table {
+  border-collapse: collapse;
+  min-width: 980px;
+  width: 100%;
+}
+
+.crm-table th,
+.crm-table td {
+  border-bottom: 1px solid var(--line-light);
+  padding: 1rem 1.1rem;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.crm-table th {
+  background: var(--ae-ink);
+  color: var(--ae-white);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.crm-table td {
+  color: var(--ae-graphite);
+  font-size: 0.9rem;
+}
+
+.crm-table tbody tr:hover {
+  background: #fafafa;
+}
+
+.crm-id,
+.crm-name {
+  color: var(--ae-ink);
+  font-weight: 600;
+}
+
+.crm-id {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+.crm-name:hover,
+.crm-id:hover,
+.crm-back a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.crm-status {
+  border: 1px solid var(--line-light);
+  display: inline-block;
+  font-size: 0.76rem;
+  padding: 0.35rem 0.6rem;
+  white-space: nowrap;
+}
+
+.crm-empty {
+  color: var(--ae-mid) !important;
+  padding-block: 3rem !important;
+  text-align: center !important;
+}
+
+.crm-back {
+  margin-bottom: 2rem;
+}
+
+.crm-header-dossier {
+  align-items: flex-start;
+}
+
+.crm-dossier {
+  max-width: 980px;
+}
+
+.crm-card {
+  background: var(--ae-white);
+  margin-top: 1rem;
+  padding: clamp(1.4rem, 3vw, 2.5rem);
+}
+
+.crm-card h2 {
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  margin-bottom: 1.5rem;
+}
+
+.crm-details {
+  display: grid;
+  gap: 1rem 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+}
+
+.crm-details div {
+  border-top: 1px solid var(--line-light);
+  padding-top: 0.75rem;
+}
+
+.crm-details dt {
+  color: var(--ae-mid);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.crm-details dd {
+  margin: 0;
+}
+
+.crm-stack pre {
+  border-top: 1px solid var(--line-light);
+  font-family: var(--font);
+  font-size: 0.85rem;
+  margin: 0;
+  padding: 1rem 0;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 700px) {
+  .crm-header,
+  .crm-header-dossier {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .crm-header .button {
+    width: 100%;
+  }
+
+  .crm-details {
+    grid-template-columns: 1fr;
+  }
 }
