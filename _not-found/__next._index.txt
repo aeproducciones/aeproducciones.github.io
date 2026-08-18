@@ -1,0 +1,7 @@
+1:"$Sreact.fragment"
+2:I[7109,[],""]
+3:I[2625,[],""]
+4:I[6577,["354","static/chunks/354-9c9d8ccd92879631.js","974","static/chunks/app/page-85fa23d21f2d5835.js"],"Image"]
+5:I[6008,["354","static/chunks/354-9c9d8ccd92879631.js","974","static/chunks/app/page-85fa23d21f2d5835.js"],""]
+:HL["/_next/static/css/87a52502744e91ff.css","style"]
+0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/87a52502744e91ff.css","precedence":"next"}]],["$","html",null,{"lang":"es","children":["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#contenido","children":"Saltar al contenido"}],["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}],"notFound":[["$","main",null,{"className":"not-found","id":"contenido","children":[["$","$L4",null,{"src":"/brand/ae-logo-light.png","width":1472,"height":636,"alt":"AE Producciones","unoptimized":true}],["$","p",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"children":"Página no disponible."}],["$","$L5",null,{"className":"button button-light","href":"/es","children":"Volver al inicio"}]]}],[]]}]]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"MUZyXB9AULZgIsgOXqJnI"}
