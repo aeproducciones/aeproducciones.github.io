@@ -58,8 +58,8 @@ export default function ConnectPage() {
         </div>
         <figure>
           <Image
-            src="/media/adrian-guitar-close.jpg"
-            alt="Adrián Eugenio con guitarra."
+            src="/media/adrian-live-stage.jpg"
+            alt="Adrián Eugenio en presentación en vivo con guitarra."
             fill
             sizes="(max-width: 720px) 100vw, 44vw"
             priority
