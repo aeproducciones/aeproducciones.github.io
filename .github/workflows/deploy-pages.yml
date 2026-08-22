@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - deploy-dossier
   workflow_dispatch:
 
 permissions:
