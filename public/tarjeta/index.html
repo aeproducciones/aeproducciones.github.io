@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<title>Adrián Eugenio Acevedo · AE Producciones</title>
+<meta name="description" content="AE Producciones · Royal Music · Tarjeta digital de Adrián Eugenio Acevedo">
+<style>
+:root{--bg:#050505;--ink:#f5f5f3;--muted:#a9aaa7;--line:rgba(255,255,255,.17);--panel:#0b0b0b}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
+body{min-height:100vh}
+main{width:min(100%,1040px);margin:0 auto;background:var(--bg)}
+.hero{background:#000}
+.hero img{display:block;width:100%;height:auto}
+.actions{padding:0 5.5% 32px;background:#050505}
+.actions-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line)}
+.action{appearance:none;background:none;border:0;border-bottom:1px solid var(--line);color:var(--ink);min-height:62px;padding:0 14px;display:flex;align-items:center;justify-content:space-between;text-decoration:none;text-transform:uppercase;letter-spacing:.055em;font-size:12px;cursor:pointer;text-align:left}
+.action:nth-child(odd){border-right:1px solid var(--line)}
+.action.primary{font-weight:700}
+.action .arrow{color:#777;font-size:15px}
+.quote{display:none;border-bottom:1px solid var(--line);padding:28px 0 4px}
+.quote.open{display:block}
+.quote h2{font-size:26px;font-weight:500;letter-spacing:-.02em;margin:0 0 8px}
+.quote p{margin:0 0 24px;color:var(--muted);font-size:14px;line-height:1.5}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.055em;color:#bfc0bd}
+input,select,textarea{width:100%;margin-top:7px;background:#0d0d0d;border:1px solid #303030;color:#f4f4f2;border-radius:0;padding:13px 12px;font:inherit;font-size:14px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:#777}
+.full{grid-column:1/-1}
+.submit{width:100%;margin:18px 0 22px;background:#f3f3f1;color:#090909;border:0;padding:15px 18px;text-transform:uppercase;letter-spacing:.055em;font-weight:700;font-size:12px;cursor:pointer}
+.note{color:#6f6f6c;font-size:11px;padding-top:16px}
+@media(min-width:760px){.actions-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.action:nth-child(odd){border-right:0}.action:not(:nth-child(4n)){border-right:1px solid var(--line)}}
+@media(max-width:560px){.actions{padding:0 18px 26px}.action{min-height:58px;font-size:11px;padding:0 11px}.grid{grid-template-columns:1fr}.full{grid-column:auto}.quote h2{font-size:23px}}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero" aria-label="Tarjeta de presentación">
+    <img src="tarjeta-ae.jpg" alt="AE Producciones y Royal Music · Adrián Eugenio Acevedo">
+  </section>
+  <section class="actions">
+    <div class="actions-grid">
+      <button class="action primary" id="quoteToggle" type="button"><span>Cotiza</span><span class="arrow">↘</span></button>
+      <a class="action primary" href="https://wa.me/524427111671?text=Hola%2C%20vi%20tu%20tarjeta%20digital%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n." target="_blank" rel="noopener"><span>WhatsApp</span><span class="arrow">↗</span></a>
+      <a class="action" href="https://www.instagram.com/adrian.eugenio33/" target="_blank" rel="noopener"><span>Instagram</span><span class="arrow">↗</span></a>
+      <a class="action" href="https://produccionesae.com/es/portafolio" target="_blank" rel="noopener"><span>Video / Portafolio</span><span class="arrow">↗</span></a>
+      <a class="action" href="https://produccionesae.com" target="_blank" rel="noopener"><span>Sitio web</span><span class="arrow">↗</span></a>
+      <a class="action" href="https://produccionesae.com/es/royal-music" target="_blank" rel="noopener"><span>Royal Music</span><span class="arrow">↗</span></a>
+      <a class="action" href="mailto:aeproduccionesoficial@gmail.com"><span>Correo</span><span class="arrow">↗</span></a>
+      <a class="action" href="tel:+524427111671"><span>Teléfono</span><span class="arrow">↗</span></a>
+    </div>
+    <form class="quote" id="quoteForm">
+      <h2>Solicitar cotización</h2>
+      <p>Comparte los datos principales del evento. Al enviar, se abrirá WhatsApp con la información lista.</p>
+      <div class="grid">
+        <label>Nombre completo<input name="name" autocomplete="name" required></label>
+        <label>WhatsApp<input name="phone" inputmode="tel" autocomplete="tel" required></label>
+        <label>Tipo de evento<select name="eventType" required><option value="">Seleccionar</option><option>Boda o celebración privada</option><option>Hotel o espacio para eventos</option><option>Cóctel, cena privada o evento especial</option><option>Evento empresarial o corporativo</option><option>Otro</option></select></label>
+        <label>Formato / servicio<select name="service" required><option value="">Seleccionar</option><option>Royal Solista</option><option>Royal Trío</option><option>Royal Unplugged</option><option>Royal Ceremony</option><option>Refuerzo sonoro / audio</option><option>Aún no estoy seguro</option></select></label>
+        <label>Fecha<input name="date" type="date"></label>
+        <label>Sede o ciudad<input name="location" placeholder="Puede quedar por definir"></label>
+        <label class="full">Correo electrónico (opcional)<input name="email" type="email" autocomplete="email"></label>
+        <label class="full">Detalles o requerimientos adicionales<textarea name="details" rows="4" placeholder="Comparte únicamente lo que ya tengas definido"></textarea></label>
+      </div>
+      <button class="submit" type="submit">Enviar datos por WhatsApp</button>
+    </form>
+    <div class="note">AE Producciones · Royal Music · 442 711 1671</div>
+  </section>
+</main>
+<script>
+const toggle=document.getElementById('quoteToggle');const form=document.getElementById('quoteForm');toggle.addEventListener('click',()=>{form.classList.toggle('open');toggle.querySelector('.arrow').textContent=form.classList.contains('open')?'↟':'↘';if(form.classList.contains('open'))form.scrollIntoView({behavior:'smooth',block:'start'})});form.addEventListener('submit',(e)=>{e.preventDefault();const d=new FormData(form);const msg=['Hola, vi la tarjeta digital de AE Producciones y quiero solicitar una cotización.','',`Nombre: ${d.get('name')}`,`WhatsApp: ${d.get('phone')}`,`Tipo de evento: ${d.get('eventType')}`,`Formato / servicio: ${d.get('service')}`,`Fecha: ${d.get('date')||'Por definir'}`,`Sede / ciudad: ${d.get('location')||'Por definir'}`,`Correo: ${d.get('email')||'No indicado'}`,`Detalles: ${d.get('details')||'Por conversar'}`].join('\n');window.location.href='https://wa.me/524427111671?text='+encodeURIComponent(msg)});
+</script>
+</body>
+</html>
