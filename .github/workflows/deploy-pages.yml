@@ -19,8 +19,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout stable public site
         uses: actions/checkout@v4
+        with:
+          ref: 447595af60646f757f524a76bdffa1398b9c6cd9
+
+      - name: Add official presentation PDF
+        run: |
+          curl --fail --location --retry 3 \
+            "https://raw.githubusercontent.com/aeproducciones/aeproducciones.github.io/main/public/media/AE-Producciones-Presentacion.pdf" \
+            --output public/media/AE-Producciones-Presentacion.pdf
+          echo "c54157efe4c4be186b0834693d67c9b5b83c3c2b8f456873f9b69724f51006de  public/media/AE-Producciones-Presentacion.pdf" | sha256sum --check
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
