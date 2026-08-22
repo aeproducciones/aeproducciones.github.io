@@ -7,14 +7,25 @@
 <title>Adrián Eugenio Acevedo · AE Producciones</title>
 <meta name="description" content="AE Producciones · Royal Music · Tarjeta digital de Adrián Eugenio Acevedo">
 <style>
-:root{--bg:#050505;--ink:#f5f5f3;--muted:#a9aaa7;--line:rgba(255,255,255,.17);--panel:#0b0b0b}
+:root{--bg:#050505;--ink:#f5f5f3;--muted:#a7a7a3;--line:rgba(255,255,255,.17)}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
 body{min-height:100vh}
-main{width:min(100%,1040px);margin:0 auto;background:var(--bg)}
-.hero{background:#000}
-.hero img{display:block;width:100%;height:auto}
-.actions{padding:0 5.5% 32px;background:#050505}
+main{width:min(100%,1060px);margin:0 auto;background:#050505}
+.card{display:grid;grid-template-columns:58% 42%;min-height:730px;background:#000;overflow:hidden}
+.card-left{position:relative;padding:40px 46px 34px;display:flex;flex-direction:column;overflow:hidden}
+.brand{display:flex;align-items:flex-start;gap:42px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.18)}
+.brand img{object-fit:contain;height:auto;filter:none}
+.brand .ae{width:156px}
+.brand .royal{width:142px;margin-top:4px}
+.identity{margin:auto 0;padding:54px 0}
+.identity h1{margin:0;font-size:clamp(48px,5.9vw,76px);line-height:1.06;font-weight:500;letter-spacing:-.035em}
+.formats{margin-top:96px;color:#c3c3bf;font-size:17px;line-height:1.95;font-weight:600;letter-spacing:.035em;text-transform:uppercase}
+.contact{position:relative;z-index:2;color:#bdbdb9;font-size:15px;line-height:1.85;padding-top:18px}
+.watermark{position:absolute;left:-13%;bottom:-7%;width:112%;opacity:.08;pointer-events:none}
+.card-photo{min-height:730px;background:#ddd;overflow:hidden}
+.card-photo img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 24%;filter:grayscale(1)}
+.actions{padding:0 5.5% 34px;background:#050505}
 .actions-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line)}
 .action{appearance:none;background:none;border:0;border-bottom:1px solid var(--line);color:var(--ink);min-height:62px;padding:0 14px;display:flex;align-items:center;justify-content:space-between;text-decoration:none;text-transform:uppercase;letter-spacing:.055em;font-size:12px;cursor:pointer;text-align:left}
 .action:nth-child(odd){border-right:1px solid var(--line)}
@@ -32,14 +43,40 @@ input:focus,select:focus,textarea:focus{border-color:#777}
 .submit{width:100%;margin:18px 0 22px;background:#f3f3f1;color:#090909;border:0;padding:15px 18px;text-transform:uppercase;letter-spacing:.055em;font-weight:700;font-size:12px;cursor:pointer}
 .note{color:#6f6f6c;font-size:11px;padding-top:16px}
 @media(min-width:760px){.actions-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.action:nth-child(odd){border-right:0}.action:not(:nth-child(4n)){border-right:1px solid var(--line)}}
-@media(max-width:560px){.actions{padding:0 18px 26px}.action{min-height:58px;font-size:11px;padding:0 11px}.grid{grid-template-columns:1fr}.full{grid-column:auto}.quote h2{font-size:23px}}
+@media(max-width:720px){
+  .card{grid-template-columns:1fr;min-height:0}
+  .card-photo{order:1;height:54svh;min-height:390px}
+  .card-photo img{object-position:center 18%}
+  .card-left{order:2;min-height:540px;padding:28px 24px 30px}
+  .brand{gap:26px;padding-bottom:22px}.brand .ae{width:124px}.brand .royal{width:112px}
+  .identity{padding:42px 0 30px}.identity h1{font-size:clamp(42px,13vw,58px)}
+  .formats{margin-top:38px;font-size:12px;line-height:1.9}
+  .contact{font-size:12px}.watermark{width:140%;left:-31%;bottom:-6%}
+  .actions{padding:0 18px 28px}.action{min-height:58px;font-size:11px;padding:0 11px}
+  .grid{grid-template-columns:1fr}.full{grid-column:auto}.quote h2{font-size:23px}
+}
 </style>
 </head>
 <body>
 <main>
-  <section class="hero" aria-label="Tarjeta de presentación">
-    <img src="tarjeta-ae.jpg" alt="AE Producciones y Royal Music · Adrián Eugenio Acevedo">
+  <section class="card" aria-label="Tarjeta de presentación de Adrián Eugenio Acevedo">
+    <div class="card-left">
+      <div class="brand">
+        <img class="ae" src="../brand/ae-producciones-lockup-light.png" alt="AE Producciones">
+        <img class="royal" src="../brand/royal-music-light.png" alt="Royal Music">
+      </div>
+      <div class="identity">
+        <h1>Adrián Eugenio<br>Acevedo</h1>
+        <div class="formats">Royal Solista · Royal Trío<br>Royal Unplugged · Royal Ceremony</div>
+      </div>
+      <div class="contact">442 711 1671<br>aeproduccionesoficial@gmail.com<br>@adrian.eugenio33</div>
+      <img class="watermark" src="../brand/ae-logo-light.png" alt="" aria-hidden="true">
+    </div>
+    <div class="card-photo">
+      <img src="../media/adrian-studio-portrait.jpg" alt="Adrián Eugenio Acevedo">
+    </div>
   </section>
+
   <section class="actions">
     <div class="actions-grid">
       <button class="action primary" id="quoteToggle" type="button"><span>Cotiza</span><span class="arrow">↘</span></button>
@@ -51,6 +88,7 @@ input:focus,select:focus,textarea:focus{border-color:#777}
       <a class="action" href="mailto:aeproduccionesoficial@gmail.com"><span>Correo</span><span class="arrow">↗</span></a>
       <a class="action" href="tel:+524427111671"><span>Teléfono</span><span class="arrow">↗</span></a>
     </div>
+
     <form class="quote" id="quoteForm">
       <h2>Solicitar cotización</h2>
       <p>Comparte los datos principales del evento. Al enviar, se abrirá WhatsApp con la información lista.</p>
