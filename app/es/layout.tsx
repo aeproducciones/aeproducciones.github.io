@@ -10,7 +10,7 @@ export default function SpanishSiteLayout({
   return (
     <>
       <SiteHeader />
-      <main id="contenido">{children}</main>
+      <main id="contenido" tabIndex={-1}>{children}</main>
       <SiteFooter />
       <MobileDock />
     </>

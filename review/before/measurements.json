@@ -1,0 +1,86 @@
+[
+  {
+    "route": "/es/",
+    "size": "desktop",
+    "height": 1000,
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/es/portafolio/",
+    "size": "desktop",
+    "height": 1000,
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/es/royal-music/",
+    "size": "desktop",
+    "height": 1000,
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/es/solicitar-propuesta/",
+    "size": "desktop",
+    "height": 1000,
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/es/solicitar-propuesta/#formulario",
+    "size": "desktop",
+    "height": 1000,
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/es/",
+    "size": "mobile",
+    "height": 844,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "route": "/es/portafolio/",
+    "size": "mobile",
+    "height": 844,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "route": "/es/royal-music/",
+    "size": "mobile",
+    "height": 844,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "route": "/es/solicitar-propuesta/",
+    "size": "mobile",
+    "height": 844,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "route": "/es/solicitar-propuesta/#formulario",
+    "size": "mobile",
+    "height": 844,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "route": "/es/",
+    "size": "tablet",
+    "height": 1024,
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/es/",
+    "size": "intermediate",
+    "height": 768,
+    "scrollWidth": 1024,
+    "width": 1024
+  }
+]

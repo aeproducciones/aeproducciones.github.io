@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/app/lib/metadata";
 import Image from "next/image";
 import {
   FinalCta,
@@ -7,11 +7,11 @@ import {
 } from "@/app/components/ui";
 import { whatsappMessages } from "@/app/lib/site-config";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata("/es/servicios", {
   title: "Producción y audio profesional",
   description:
     "AE Live Sessions, Refuerzo Sonoro y producción técnica de AE Producciones.",
-};
+});
 
 const liveSessionIncludes = [
   "Registro en 24-bit / 48 kHz",

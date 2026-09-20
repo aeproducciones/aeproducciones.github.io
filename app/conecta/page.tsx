@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/app/lib/metadata";
 import Image from "next/image";
 import Link from "next/link";
 import { ActionLink } from "@/app/components/ui";
@@ -9,11 +9,11 @@ import {
   whatsappUrl,
 } from "@/app/lib/site-config";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata("/conecta", {
   title: "Conecta con AE Producciones",
   description: "Música en vivo · Producción · Audio profesional",
   robots: { index: false, follow: true },
-};
+});
 
 const quickPaths = [
   ["Royal Music", "/es/royal-music"],

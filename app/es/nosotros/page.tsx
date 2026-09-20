@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/app/lib/metadata";
 import Image from "next/image";
 import {
   FinalCta,
@@ -7,11 +7,11 @@ import {
 } from "@/app/components/ui";
 import { values } from "@/app/content/es";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata("/es/nosotros", {
   title: "AE Producciones",
   description:
     "Perfil profesional, misión, visión y valores de AE Producciones.",
-};
+});
 
 export default function AboutPage() {
   return (

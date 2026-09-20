@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/app/lib/metadata";
 import Image from "next/image";
 import {
   FinalCta,
@@ -7,11 +7,11 @@ import {
 } from "@/app/components/ui";
 import { portfolioItems } from "@/app/content/es";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata("/es/portafolio", {
   title: "Evidencia",
   description:
     "Selección fotográfica de interpretación, presencia escénica y música en vivo de AE Producciones.",
-};
+});
 
 export default function PortfolioPage() {
   return (

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/app/lib/metadata";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -20,11 +20,11 @@ import {
   whatsappUrl,
 } from "@/app/lib/site-config";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata("/es", {
   title: "Música en vivo, producción y audio profesional",
   description:
     "AE Producciones integra música en vivo, producción técnica, servicios de grabación profesional y audio para eventos.",
-};
+});
 
 export default function HomePage() {
   return (
@@ -69,7 +69,7 @@ export default function HomePage() {
           </div>
           <figure className="home-hero-image">
             <Image
-              src="/media/royal-music-logo.jpg"
+              src="/media/royal-music-logo.webp"
               alt="Royal Music"
               fill
               sizes="(max-width: 800px) 100vw, 46vw"

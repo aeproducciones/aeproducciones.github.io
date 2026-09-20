@@ -1,0 +1,282 @@
+[
+  {
+    "phase": "before",
+    "route": "/es/",
+    "viewport": {
+      "name": "desktop",
+      "width": 1101,
+      "height": 630
+    },
+    "clientWidth": 1101,
+    "documentWidth": 1101,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 1101
+  },
+  {
+    "phase": "after",
+    "route": "/es/",
+    "viewport": {
+      "name": "desktop",
+      "width": 1101,
+      "height": 630
+    },
+    "clientWidth": 1101,
+    "documentWidth": 1101,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 1101
+  },
+  {
+    "phase": "before",
+    "route": "/es/portafolio/",
+    "viewport": {
+      "name": "desktop",
+      "width": 1101,
+      "height": 630
+    },
+    "clientWidth": 1101,
+    "documentWidth": 1101,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 1101
+  },
+  {
+    "phase": "after",
+    "route": "/es/portafolio/",
+    "viewport": {
+      "name": "desktop",
+      "width": 1101,
+      "height": 630
+    },
+    "clientWidth": 1101,
+    "documentWidth": 1101,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 1101
+  },
+  {
+    "phase": "before",
+    "route": "/es/royal-music/",
+    "viewport": {
+      "name": "desktop",
+      "width": 1101,
+      "height": 630
+    },
+    "clientWidth": 1101,
+    "documentWidth": 1101,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 1101
+  },
+  {
+    "phase": "after",
+    "route": "/es/royal-music/",
+    "viewport": {
+      "name": "desktop",
+      "width": 1101,
+      "height": 630
+    },
+    "clientWidth": 1101,
+    "documentWidth": 1101,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 1101
+  },
+  {
+    "phase": "before",
+    "route": "/es/solicitar-propuesta/",
+    "viewport": {
+      "name": "desktop",
+      "width": 1101,
+      "height": 630
+    },
+    "clientWidth": 1101,
+    "documentWidth": 1101,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 1101
+  },
+  {
+    "phase": "after",
+    "route": "/es/solicitar-propuesta/",
+    "viewport": {
+      "name": "desktop",
+      "width": 1101,
+      "height": 630
+    },
+    "clientWidth": 1101,
+    "documentWidth": 1101,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 1101
+  },
+  {
+    "phase": "before",
+    "route": "/es/",
+    "viewport": {
+      "name": "mobile",
+      "width": 390,
+      "height": 630
+    },
+    "clientWidth": 390,
+    "documentWidth": 390,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 390
+  },
+  {
+    "phase": "after",
+    "route": "/es/",
+    "viewport": {
+      "name": "mobile",
+      "width": 390,
+      "height": 630
+    },
+    "clientWidth": 390,
+    "documentWidth": 390,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 390
+  },
+  {
+    "phase": "before",
+    "route": "/es/portafolio/",
+    "viewport": {
+      "name": "mobile",
+      "width": 390,
+      "height": 630
+    },
+    "clientWidth": 390,
+    "documentWidth": 390,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 390
+  },
+  {
+    "phase": "after",
+    "route": "/es/portafolio/",
+    "viewport": {
+      "name": "mobile",
+      "width": 390,
+      "height": 630
+    },
+    "clientWidth": 390,
+    "documentWidth": 390,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 390
+  },
+  {
+    "phase": "before",
+    "route": "/es/royal-music/",
+    "viewport": {
+      "name": "mobile",
+      "width": 390,
+      "height": 630
+    },
+    "clientWidth": 390,
+    "documentWidth": 390,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 390
+  },
+  {
+    "phase": "after",
+    "route": "/es/royal-music/",
+    "viewport": {
+      "name": "mobile",
+      "width": 390,
+      "height": 630
+    },
+    "clientWidth": 390,
+    "documentWidth": 390,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 390
+  },
+  {
+    "phase": "before",
+    "route": "/es/solicitar-propuesta/",
+    "viewport": {
+      "name": "mobile",
+      "width": 390,
+      "height": 630
+    },
+    "clientWidth": 390,
+    "documentWidth": 390,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 390
+  },
+  {
+    "phase": "after",
+    "route": "/es/solicitar-propuesta/",
+    "viewport": {
+      "name": "mobile",
+      "width": 390,
+      "height": 630
+    },
+    "clientWidth": 390,
+    "documentWidth": 390,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 390
+  },
+  {
+    "phase": "before",
+    "route": "/es/",
+    "viewport": {
+      "name": "tablet",
+      "width": 768,
+      "height": 630
+    },
+    "clientWidth": 767,
+    "documentWidth": 767,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 767
+  },
+  {
+    "phase": "after",
+    "route": "/es/",
+    "viewport": {
+      "name": "tablet",
+      "width": 768,
+      "height": 630
+    },
+    "clientWidth": 767,
+    "documentWidth": 767,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 767
+  },
+  {
+    "phase": "before",
+    "route": "/es/",
+    "viewport": {
+      "name": "intermediate",
+      "width": 1024,
+      "height": 630
+    },
+    "clientWidth": 1023,
+    "documentWidth": 1023,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 1023
+  },
+  {
+    "phase": "after",
+    "route": "/es/",
+    "viewport": {
+      "name": "intermediate",
+      "width": 1024,
+      "height": 630
+    },
+    "clientWidth": 1023,
+    "documentWidth": 1023,
+    "dpr": 1.9470000267028809,
+    "height": 630,
+    "width": 1023
+  }
+]

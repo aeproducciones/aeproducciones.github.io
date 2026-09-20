@@ -1,8 +1,14 @@
 import type { Metadata, Viewport } from "next";
+import { pageMetadata, siteUrl } from "@/app/lib/metadata";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://produccionesae.com"),
+  ...pageMetadata("/es", {
+    title: "AE Producciones",
+    description:
+      "Música en vivo, producción técnica, servicios de grabación profesional y audio para eventos.",
+  }),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "AE Producciones | Música en vivo, producción y audio profesional",
     template: "%s | AE Producciones",
@@ -13,26 +19,6 @@ export const metadata: Metadata = {
     icon: "/brand/ae-logo-dark.png",
     shortcut: "/brand/ae-logo-dark.png",
     apple: "/brand/ae-logo-dark.png",
-  },
-  openGraph: {
-    title: "AE Producciones",
-    description: "Música en vivo · Producción · Audio profesional",
-    locale: "es_MX",
-    type: "website",
-    images: [
-      {
-        url: "/media/selection-web/ae-039-royal-trio.webp",
-        width: 1290,
-        height: 704,
-        alt: "Royal Trío durante una presentación en vivo.",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "AE Producciones",
-    description: "Música en vivo · Producción · Audio profesional",
-    images: ["/media/selection-web/ae-039-royal-trio.webp"],
   },
 };
 

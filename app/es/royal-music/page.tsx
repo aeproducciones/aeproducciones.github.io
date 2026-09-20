@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/app/lib/metadata";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -10,11 +10,11 @@ import {
 import { royalFormats } from "@/app/content/es";
 import { whatsappMessages } from "@/app/lib/site-config";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata("/es/royal-music", {
   title: "Royal Music",
   description:
     "La división musical de AE Producciones: formatos acústicos, presentaciones para petit comité y ensambles selectos.",
-};
+});
 
 export default function RoyalMusicPage() {
   return (

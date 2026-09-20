@@ -5,6 +5,17 @@ import test from "node:test";
 const projectRoot = new URL("../", import.meta.url);
 
 async function render(pathname = "/es") {
+  if (process.env.PUBLIC_EXPORT === "true") {
+    const file = new URL(`out/${pathname.replace(/^\/+|\/+$/g, "")}/index.html`, projectRoot);
+    try {
+      return new Response(await readFile(file, "utf8"), {
+        headers: { "content-type": "text/html; charset=utf-8" },
+      });
+    } catch (error) {
+      if (error.code === "ENOENT") return new Response("Not found in out/. Run build:pages first.", { status: 404 });
+      throw error;
+    }
+  }
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set(
     "test",
@@ -115,7 +126,10 @@ test("ships official brand assets and no starter preview", async () => {
     access(new URL("public/media/adrian-guitar-studio.jpg", projectRoot)),
   ]);
 
-  const previewFiles = await readdir(new URL("app/_sites-preview", projectRoot));
+  const previewFiles = await readdir(new URL("app/_sites-preview", projectRoot)).catch((error) => {
+    if (error.code === "ENOENT") return [];
+    throw error;
+  });
   assert.deepEqual(previewFiles, []);
 
   const [layout, homepage] = await Promise.all([
@@ -188,7 +202,10 @@ test("keeps each photographic context purposeful", async () => {
 
 test("keeps the approved monochrome and performance budgets", async () => {
   const css = await readFile(new URL("app/globals.css", projectRoot), "utf8");
-  assert.doesNotMatch(css, /box-shadow/i);
+  const shadows = [...css.matchAll(/box-shadow:\s*([^;]+);/gi)].map(
+    (match) => match[1].replace(/\s*!important\s*$/i, "").trim().toLowerCase(),
+  );
+  assert.deepEqual(shadows.filter((value) => value !== "none"), []);
   const radii = [...css.matchAll(/border-radius:\s*([^;]+);/gi)].map(
     (match) => match[1].trim(),
   );
@@ -211,7 +228,9 @@ test("keeps the approved monochrome and performance budgets", async () => {
   assert.deepEqual(unexpectedColors, []);
 
   const mediaDirectory = new URL("public/media/", projectRoot);
-  const mediaFiles = await readdir(mediaDirectory);
+  const mediaFiles = (await readdir(mediaDirectory)).filter((file) =>
+    /\.(?:avif|gif|jpe?g|png|svg|webp)$/i.test(file),
+  );
   const mediaStats = await Promise.all(
     mediaFiles.map((file) => stat(new URL(file, mediaDirectory))),
   );

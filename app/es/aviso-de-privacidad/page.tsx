@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/app/lib/metadata";
 import { PageHero } from "@/app/components/ui";
 import { siteConfig } from "@/app/lib/site-config";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata("/es/aviso-de-privacidad", {
   title: "Información de privacidad",
   description:
     "Funcionamiento técnico del formulario de contacto de AE Producciones.",
   robots: { index: false, follow: true },
-};
+});
 
 export default function PrivacyPage() {
   return (

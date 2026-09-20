@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/app/lib/metadata";
 import { notFound } from "next/navigation";
 import {
   FinalCta,
@@ -25,7 +26,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const page = solutionPages[slug as SolutionSlug];
   if (!page) return {};
-  return { title: page.label, description: page.intro };
+  return pageMetadata(`/es/soluciones/${slug}`, {
+    title: page.label,
+    description: page.intro,
+  });
 }
 
 export default async function SolutionDetailPage({

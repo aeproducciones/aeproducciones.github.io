@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/app/lib/metadata";
 import { notFound } from "next/navigation";
 import {
   FinalCta,
@@ -21,10 +22,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const format = formatPages[slug as FormatSlug];
   if (!format) return {};
-  return {
+  return pageMetadata(`/es/royal-music/${slug}`, {
     title: `${format.title} | Royal Music`,
     description: format.intro,
-  };
+  });
 }
 
 export default async function FormatPage({

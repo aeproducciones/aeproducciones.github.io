@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { MobileMenu } from "./mobile-menu";
 import {
   siteConfig,
   whatsappMessages,
@@ -49,24 +50,7 @@ export function SiteHeader() {
           </a>
         </nav>
 
-        <details className="mobile-menu">
-          <summary>
-            <span>Menú</span>
-            <span className="menu-lines" aria-hidden="true" />
-          </summary>
-          <nav aria-label="Navegación móvil">
-            <Link href="/es">Inicio</Link>
-            {primaryLinks.map((link) => (
-              <Link href={link.href} key={link.href}>
-                {link.label}
-              </Link>
-            ))}
-            <Link href="/es/solicitar-propuesta">Solicitar propuesta</Link>
-            <a href={reserveUrl} target="_blank" rel="noreferrer">
-              Reserva
-            </a>
-          </nav>
-        </details>
+        <MobileMenu links={primaryLinks} reserveUrl={reserveUrl} />
       </div>
     </header>
   );

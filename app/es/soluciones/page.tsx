@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/app/lib/metadata";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -9,11 +9,11 @@ import {
 } from "@/app/components/ui";
 import { markets } from "@/app/content/es";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata("/es/soluciones", {
   title: "Soluciones",
   description:
     "Bodas, hoteles, cócteles, cenas privadas y eventos corporativos atendidos con música en vivo, producción y audio profesional.",
-};
+});
 
 export default function SolutionsPage() {
   return (

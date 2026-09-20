@@ -2,7 +2,15 @@
 
 import Link from "next/link";
 import { FormEvent, useState } from "react";
-import { siteConfig } from "@/app/lib/site-config";
+import { whatsappUrl } from "@/app/lib/site-config";
+import {
+  composeQuoteMessage,
+  quoteFieldOrder,
+  readQuoteForm,
+  validateQuote,
+  type QuoteErrors,
+  type RequiredQuoteField,
+} from "@/app/lib/quote-message";
 
 const serviceGroups = [
   {
@@ -27,67 +35,128 @@ const serviceGroups = [
 
 export function QuoteForm() {
   const [status, setStatus] = useState("");
-  const [serviceError, setServiceError] = useState("");
+  const [errors, setErrors] = useState<QuoteErrors>({});
+  const [preparedUrl, setPreparedUrl] = useState("");
+
+  function handleChange(event: FormEvent<HTMLFormElement>) {
+    setStatus("");
+    setPreparedUrl("");
+
+    const field = (event.target as HTMLInputElement).name as RequiredQuoteField;
+    if (!quoteFieldOrder.includes(field) || !errors[field]) return;
+
+    const nextError = validateQuote(
+      readQuoteForm(new FormData(event.currentTarget)),
+    )[field];
+    setErrors((current) => {
+      const next = { ...current };
+      if (nextError) next[field] = nextError;
+      else delete next[field];
+      return next;
+    });
+  }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const selectedServices = data.getAll("services");
+    const form = event.currentTarget;
+    const details = readQuoteForm(new FormData(form));
+    const nextErrors = validateQuote(details);
+    const firstInvalid = quoteFieldOrder.find((field) => nextErrors[field]);
+    setErrors(nextErrors);
+    setPreparedUrl("");
 
-    if (!selectedServices.length) {
-      setServiceError("Selecciona al menos una opción para continuar.");
-      setStatus("");
-      event.currentTarget
-        .querySelector<HTMLInputElement>('input[name="services"]')
-        ?.focus();
+    if (firstInvalid) {
+      setStatus("Revisa los campos indicados antes de continuar.");
+      requestAnimationFrame(() => {
+        form
+          .querySelector<HTMLInputElement | HTMLSelectElement>(
+            `[name="${firstInvalid}"]`,
+          )
+          ?.focus();
+      });
       return;
     }
 
-    setServiceError("");
-    const services = selectedServices.join(", ");
-    const message = [
-      "Hola, vi el sitio de AE Producciones y quiero solicitar una propuesta.",
-      "",
-      `Nombre: ${data.get("name")}`,
-      `Contacto: ${data.get("contact")}`,
-      `Tipo de evento: ${data.get("eventType")}`,
-      `Fecha: ${data.get("date") || "Por definir"}`,
-      `Sede: ${data.get("location") || "Por definir"}`,
-      `Necesidad: ${services}`,
-      `Detalles: ${data.get("details") || "Por conversar"}`,
-    ].join("\n");
-
-    setStatus("La solicitud está preparada. Se abrirá WhatsApp para enviarla.");
-    window.open(
-      `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(message)}`,
-      "_blank",
-      "noopener,noreferrer",
+    const url = whatsappUrl(composeQuoteMessage(details));
+    setPreparedUrl(url);
+    setStatus(
+      "El mensaje está preparado; aún no se ha enviado. Revísalo y confirma el envío en WhatsApp.",
     );
+    try {
+      // With noopener, a null return value does not reliably mean a blocked tab.
+      // Keep the manual link available regardless of the browser's result.
+      window.open(url, "_blank", "noopener,noreferrer");
+    } catch {
+      setStatus(
+        "El mensaje está preparado, pero no se pudo abrir WhatsApp. Usa el enlace de abajo para revisarlo y enviarlo.",
+      );
+    }
   }
 
   return (
-    <form className="quote-form" onSubmit={handleSubmit}>
+    <form
+      className="quote-form"
+      id="propuesta"
+      tabIndex={-1}
+      onSubmit={handleSubmit}
+      onChange={handleChange}
+      noValidate
+      aria-describedby="quote-form-intro"
+    >
+      <p className="form-intro" id="quote-form-intro">
+        Los campos marcados como obligatorios permiten preparar tu mensaje.
+        Podrás revisarlo antes de enviarlo en WhatsApp.
+      </p>
       <div className="form-grid">
-        <label>
-          <span>Nombre completo</span>
-          <input name="name" autoComplete="name" required />
-        </label>
-        <label>
-          <span>WhatsApp</span>
+        <div>
+          <label htmlFor="quote-name">
+            <span>Nombre completo · obligatorio</span>
+          </label>
           <input
+            id="quote-name"
+            name="name"
+            autoComplete="name"
+            required
+            aria-invalid={Boolean(errors.name)}
+            aria-describedby={errors.name ? "name-error" : undefined}
+          />
+          {errors.name ? (
+            <p className="form-error" id="name-error">
+              {errors.name}
+            </p>
+          ) : null}
+        </div>
+        <div>
+          <label htmlFor="quote-contact">
+            <span>WhatsApp · obligatorio</span>
+          </label>
+          <input
+            id="quote-contact"
             name="contact"
+            type="tel"
             autoComplete="tel"
             inputMode="tel"
-            placeholder="442 000 0000"
+            placeholder="Tu número de WhatsApp"
             required
+            aria-invalid={Boolean(errors.contact)}
+            aria-describedby={`contact-help${errors.contact ? " contact-error" : ""}`}
           />
-        </label>
+          <p className="form-help" id="contact-help">
+            Incluye el código de país si corresponde. Puedes usar espacios o guiones.
+          </p>
+          {errors.contact ? (
+            <p className="form-error" id="contact-error">
+              {errors.contact}
+            </p>
+          ) : null}
+        </div>
       </div>
 
       <fieldset
-        aria-describedby={`service-help${serviceError ? " service-error" : ""}`}
+        aria-invalid={Boolean(errors.services)}
+        aria-describedby={`service-help${errors.services ? " service-error" : ""}`}
       >
-        <legend>¿Qué necesitas?</legend>
+        <legend>¿Qué necesitas? · obligatorio</legend>
         <p className="form-help" id="service-help">
           Puedes seleccionar más de una opción.
         </p>
@@ -98,7 +167,13 @@ export function QuoteForm() {
               <div className="choice-grid">
                 {group.options.map((service) => (
                   <label className="choice" key={service}>
-                    <input name="services" type="checkbox" value={service} />
+                    <input
+                      name="services"
+                      type="checkbox"
+                      value={service}
+                      aria-invalid={Boolean(errors.services)}
+                      aria-describedby={errors.services ? "service-error" : undefined}
+                    />
                     <span>{service}</span>
                   </label>
                 ))}
@@ -110,21 +185,32 @@ export function QuoteForm() {
               name="services"
               type="checkbox"
               value="Aún no estoy seguro (ayúdenme a elegir)"
+              aria-invalid={Boolean(errors.services)}
+              aria-describedby={errors.services ? "service-error" : undefined}
             />
             <span>Aún no estoy seguro (ayúdenme a elegir)</span>
           </label>
         </div>
-        {serviceError ? (
-          <p className="form-error" id="service-error" role="alert">
-            {serviceError}
+        {errors.services ? (
+          <p className="form-error" id="service-error">
+            {errors.services}
           </p>
         ) : null}
       </fieldset>
 
       <div className="form-grid form-event-grid">
-        <label>
-          <span>¿Qué tipo de evento estás organizando?</span>
-          <select name="eventType" defaultValue="" required>
+        <div>
+          <label htmlFor="quote-event-type">
+            <span>¿Qué tipo de evento estás organizando? · obligatorio</span>
+          </label>
+          <select
+            id="quote-event-type"
+            name="eventType"
+            defaultValue=""
+            required
+            aria-invalid={Boolean(errors.eventType)}
+            aria-describedby={errors.eventType ? "event-type-error" : undefined}
+          >
             <option value="" disabled>
               Seleccionar
             </option>
@@ -135,19 +221,24 @@ export function QuoteForm() {
             <option>Producción audiovisual o grabación</option>
             <option>Otro</option>
           </select>
-        </label>
+          {errors.eventType ? (
+            <p className="form-error" id="event-type-error">
+              {errors.eventType}
+            </p>
+          ) : null}
+        </div>
         <label>
-          <span>Fecha</span>
+          <span>Fecha · opcional</span>
           <input name="date" type="date" />
         </label>
         <label className="form-wide">
-          <span>Sede o ciudad</span>
+          <span>Sede o ciudad · opcional</span>
           <input name="location" placeholder="Puede quedar por definir" />
         </label>
       </div>
 
       <label>
-        <span>Detalles o requerimientos adicionales</span>
+        <span>Detalles o requerimientos adicionales · opcional</span>
         <textarea
           name="details"
           rows={5}
@@ -156,23 +247,44 @@ export function QuoteForm() {
       </label>
 
       <label className="consent">
-        <input name="consent" type="checkbox" required />
+        <input
+          name="consent"
+          type="checkbox"
+          required
+          aria-invalid={Boolean(errors.consent)}
+          aria-describedby={errors.consent ? "consent-error" : undefined}
+        />
         <span>
           He leído la{" "}
           <Link href="/es/aviso-de-privacidad">información de privacidad</Link>.
+          {" "}(Obligatorio)
         </span>
       </label>
+      {errors.consent ? (
+        <p className="form-error" id="consent-error">
+          {errors.consent}
+        </p>
+      ) : null}
 
       <p className="privacy-note">
-        El sitio no almacena estos campos. La información se prepara en tu
-        navegador y se envía únicamente cuando confirmas en WhatsApp.
+        El sitio no almacena estos campos. Al continuar, se abrirá WhatsApp
+        con el mensaje preparado para que lo revises y confirmes su envío.
       </p>
       <button className="button button-dark form-submit" type="submit">
         Continuar por WhatsApp
       </button>
-      <p className="form-status" aria-live="polite">
+      <p className="form-status" role="status" aria-live="polite" aria-atomic="true">
         {status}
       </p>
+      {preparedUrl ? (
+        <p className="form-fallback">
+          Si WhatsApp no se abrió,{" "}
+          <a href={preparedUrl} target="_blank" rel="noopener noreferrer">
+            abre el mensaje preparado
+          </a>{" "}
+          para revisarlo y enviarlo.
+        </p>
+      ) : null}
     </form>
   );
 }

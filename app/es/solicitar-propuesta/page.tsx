@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/app/lib/metadata";
 import { QuoteForm } from "@/app/components/quote-form";
 import {
   PageHero,
@@ -7,11 +7,11 @@ import {
 } from "@/app/components/ui";
 import { siteConfig } from "@/app/lib/site-config";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata("/es/solicitar-propuesta", {
   title: "Solicitar propuesta",
   description:
     "Comparte la fecha, sede y formato para preparar una conversación con AE Producciones.",
-};
+});
 
 export default function QuotePage() {
   return (
@@ -21,6 +21,7 @@ export default function QuotePage() {
         title="Definir los puntos esenciales."
         text="La fecha, la sede, el formato y las condiciones técnicas permiten preparar una cotización precisa."
         breadcrumbs={[{ label: "Solicitar propuesta" }]}
+        actions={[{ label: "Ir al formulario", href: "#propuesta", style: "light" }]}
       />
 
       <section className="section quote-section" id="formulario">
