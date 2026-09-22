@@ -69,7 +69,7 @@ export default function HomePage() {
           </div>
           <figure className="home-hero-image">
             <Image
-              src="/media/royal-music-logo.webp"
+              src="/brand/royal-music-light.png"
               alt="Royal Music"
               fill
               sizes="(max-width: 800px) 100vw, 46vw"

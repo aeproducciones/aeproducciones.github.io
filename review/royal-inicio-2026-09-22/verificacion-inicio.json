@@ -1,0 +1,29 @@
+[
+  {
+    "frame": "rgba(0, 0, 0, 0)",
+    "loaded": true,
+    "logo": "/brand/royal-music-light.png",
+    "overflow": false,
+    "overlay": "none",
+    "watermark": "none",
+    "width": 1441
+  },
+  {
+    "frame": "rgba(0, 0, 0, 0)",
+    "loaded": true,
+    "logo": "/brand/royal-music-light.png",
+    "overflow": false,
+    "overlay": "none",
+    "watermark": "none",
+    "width": 820
+  },
+  {
+    "frame": "rgba(0, 0, 0, 0)",
+    "loaded": true,
+    "logo": "/brand/royal-music-light.png",
+    "overflow": false,
+    "overlay": "none",
+    "watermark": "none",
+    "width": 390
+  }
+]

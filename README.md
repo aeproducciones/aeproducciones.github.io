@@ -3,6 +3,26 @@
 Sitio oficial de AE Producciones: música en vivo, audio profesional,
 coordinación técnica y soluciones integrales para eventos.
 
+## Royal Music integrado en el inicio · 2026-09-22
+
+Adrián pidió mostrar sólo las letras de Royal Music, sin recuadro, y retirar
+la marca de agua AE únicamente de la cabecera principal. Rama fuente
+`codex/royal-inicio-2026-09-22`, base `0b20f50`; publicación anterior `c09c2bd`.
+Se reutiliza el original transparente `/brand/royal-music-light.png` y se retira
+el fondo del contenedor. Se conservan las letras originales, el teclado de la O,
+las proporciones y el texto alternativo. La marca AE permanece en las demás
+cabeceras y en el pie. No se modifica ningún archivo de imagen.
+
+Verificación: build público con tipos, lint y 19/19 pruebas correctos. Inicio
+revisado en emulación de 390, 820 y 1440 px: imagen cargada, fondo transparente,
+sin marca de agua ni capa sobre el logo, sin desbordamientos ni errores de consola.
+Se comprobó la marca intacta en Nosotros, Royal Music y Conecta. Comparaciones
+en `review/royal-inicio-2026-09-22/`; manifiesto de los 243 archivos públicos en
+`review/publication-royal-inicio-2026-09-22-manifest.json`.
+Para deshacer este ajuste, publicar mediante avance normal un commit estático
+con el árbol de `c09c2bd` y verificar Pages y el dominio. CRM, `main`, rutas,
+CNAME e infraestructura permanecen intactos.
+
 ## Marca de agua AE en las cabeceras · 2026-09-22
 
 Adrián solicitó extender la marca oscura de Quiénes somos al resto de páginas.
