@@ -13,6 +13,10 @@ Build público con tipos, lint y 19/19 pruebas correctos; revisión en emulació
 de 390 y 1441 px sin desbordamientos ni errores de consola. Capturas en
 `review/cobertura-mexico-2026-09-22/`; manifiesto de 243 archivos públicos en
 `review/publication-cobertura-mexico-2026-09-22-manifest.json`.
+Publicación verificada: fuente `575ea6c`, artefacto `01afff8` y run
+[`35773170734`](https://github.com/aeproducciones/aeproducciones.github.io/actions/runs/35773170734),
+con resultado `success` a las 19:21:01 UTC. Tras recargar el dominio se confirmó
+«En todo México.» en la cobertura del inicio y en el pie compartido.
 Para deshacer sólo esta publicación, crear un commit estático con el árbol de
 `b84e32b`, publicar por avance normal y verificar el dominio. CRM, `main`,
 imágenes, estilos, rutas, CNAME e infraestructura se conservan.
