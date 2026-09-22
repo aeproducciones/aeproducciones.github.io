@@ -10,7 +10,7 @@ import { siteConfig } from "@/app/lib/site-config";
 export const metadata = pageMetadata("/es/solicitar-propuesta", {
   title: "Solicitar propuesta",
   description:
-    "Comparte la fecha, sede y formato para preparar una conversación con AE Producciones.",
+    "Comparte el tipo de evento, la fecha y la sede para preparar una conversación con AE Producciones.",
 });
 
 export default function QuotePage() {
@@ -19,7 +19,7 @@ export default function QuotePage() {
       <PageHero
         label="Solicitar propuesta"
         title="Definir los puntos esenciales."
-        text="La fecha, la sede, el formato y las condiciones técnicas permiten preparar una cotización precisa."
+        text="El tipo de evento, la fecha y la sede permiten preparar una conversación clara sobre tu propuesta."
         breadcrumbs={[{ label: "Solicitar propuesta" }]}
         actions={[{ label: "Ir al formulario", href: "#propuesta", style: "light" }]}
       />

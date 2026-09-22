@@ -12,27 +12,6 @@ import {
   type RequiredQuoteField,
 } from "@/app/lib/quote-message";
 
-const serviceGroups = [
-  {
-    label: "Música en vivo",
-    options: [
-      "Solista",
-      "Dúo",
-      "Trío",
-      "Banda completa",
-      "Música para ceremonia",
-    ],
-  },
-  {
-    label: "Audio y producción",
-    options: [
-      "Producción técnica",
-      "Refuerzo sonoro",
-      "Renta de audio",
-    ],
-  },
-] as const;
-
 export function QuoteForm() {
   const [status, setStatus] = useState("");
   const [errors, setErrors] = useState<QuoteErrors>({});
@@ -152,74 +131,32 @@ export function QuoteForm() {
         </div>
       </div>
 
-      <fieldset
-        aria-invalid={Boolean(errors.services)}
-        aria-describedby={`service-help${errors.services ? " service-error" : ""}`}
-      >
-        <legend>¿Qué necesitas? · obligatorio</legend>
-        <p className="form-help" id="service-help">
-          Puedes seleccionar más de una opción.
-        </p>
-        <div className="service-groups">
-          {serviceGroups.map((group) => (
-            <div className="service-group" key={group.label}>
-              <p>{group.label}</p>
-              <div className="choice-grid">
-                {group.options.map((service) => (
-                  <label className="choice" key={service}>
-                    <input
-                      name="services"
-                      type="checkbox"
-                      value={service}
-                      aria-invalid={Boolean(errors.services)}
-                      aria-describedby={errors.services ? "service-error" : undefined}
-                    />
-                    <span>{service}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-          ))}
-          <label className="choice choice-assistance">
-            <input
-              name="services"
-              type="checkbox"
-              value="Aún no estoy seguro (ayúdenme a elegir)"
-              aria-invalid={Boolean(errors.services)}
-              aria-describedby={errors.services ? "service-error" : undefined}
-            />
-            <span>Aún no estoy seguro (ayúdenme a elegir)</span>
-          </label>
-        </div>
-        {errors.services ? (
-          <p className="form-error" id="service-error">
-            {errors.services}
-          </p>
-        ) : null}
-      </fieldset>
-
       <div className="form-grid form-event-grid">
         <div>
           <label htmlFor="quote-event-type">
-            <span>¿Qué tipo de evento estás organizando? · obligatorio</span>
+            <span>¿Para qué evento necesitas música? · obligatorio</span>
           </label>
+          <p className="form-help" id="event-type-help">
+            Selecciona el tipo de evento y cuéntanos qué tienes en mente.
+          </p>
           <select
             id="quote-event-type"
             name="eventType"
             defaultValue=""
             required
             aria-invalid={Boolean(errors.eventType)}
-            aria-describedby={errors.eventType ? "event-type-error" : undefined}
+            aria-describedby={`event-type-help${errors.eventType ? " event-type-error" : ""}`}
           >
             <option value="" disabled>
               Seleccionar
             </option>
-            <option>Boda o celebración privada</option>
-            <option>Hotel o espacio para eventos</option>
-            <option>Cóctel, cena privada o evento especial</option>
-            <option>Evento empresarial o corporativo</option>
-            <option>Producción audiovisual o grabación</option>
-            <option>Otro</option>
+            <option>Ceremonia</option>
+            <option>Boda</option>
+            <option>Cumpleaños</option>
+            <option>Aniversario</option>
+            <option>Evento corporativo</option>
+            <option>Fiesta o reunión privada</option>
+            <option>Otro evento</option>
           </select>
           {errors.eventType ? (
             <p className="form-error" id="event-type-error">

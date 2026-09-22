@@ -3,6 +3,39 @@
 Sitio oficial de AE Producciones: música en vivo, audio profesional,
 coordinación técnica y soluciones integrales para eventos.
 
+## Publicación aprobada · 2026-09-22
+
+Adrián autorizó aplicar las mejoras a la página pública el 22 de septiembre.
+La rama fuente `codex/publicacion-web-2026-09-22` parte de la candidata
+`94392a47d1c2e1fc0a4c63ab135930ebcac42d03` e incorpora la simplificación posterior
+del formulario aprobada en «AE Producciones | Evolución Web»: se retiran los
+selectores de audio, producción y formatos y se pregunta el tipo de evento
+(Ceremonia, Boda, Cumpleaños, Aniversario, Evento corporativo, Fiesta o reunión
+privada y Otro evento). El mensaje de WhatsApp refleja esa selección.
+
+Se repitieron build público, lint, tipos y 19 pruebas, todos correctos. En navegador
+se comprobaron los cuatro campos obligatorios, foco, mensaje con datos ficticios,
+popup bloqueado y enlace alternativo con WhatsApp interceptado. El catálogo y
+los precios de la web permanecen como en la candidata aprobada.
+
+La configuración real de Pages usa `site-production` y `/` como origen estático,
+con dominio `produccionesae.com`. El despliegue utiliza un commit fast-forward
+con el árbol exacto de `out/` y el `CNAME` existente conservado byte por byte.
+`public/CNAME` incorpora esa misma dirección para que los builds sean reproducibles.
+Son 243 archivos públicos; `review/publication-2026-09-22-manifest.json` registra
+sus SHA-256. No se publican código fuente, revisiones, simuladores ni rutas del CRM.
+No se cambian DNS, permisos, workflows, secretos ni `main`.
+
+El anterior árbol de `site-production` (`d0ff5f7`) incluía Royal Ceremony y otra
+oferta que no coincidían con la versión visible antes de publicar. Por eso no se
+superponen archivos antiguos ni se usa un simple revert a ese árbol como rollback.
+Para restaurar la versión pública previa puede reejecutarse el run histórico
+[`32588988431`](https://github.com/aeproducciones/aeproducciones.github.io/actions/runs/32588988431),
+cuyo workflow fija la fuente `447595a` y el PDF oficial, o publicarse una exportación
+verificada de esa fuente más dicho PDF conservando el CNAME. Toda restauración
+debe verificarse contra el dominio público. Los apartados del 20 de septiembre
+que siguen documentan la candidata anterior a esta autorización.
+
 ## Candidata evolutiva V1 · 2026-09-20
 
 Versión local para revisión en la rama

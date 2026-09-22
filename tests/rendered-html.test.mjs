@@ -147,22 +147,21 @@ test("presents the quote form in client-facing language", async () => {
   const html = await response.text();
 
   for (const option of [
-    "Solista",
-    "Dúo",
-    "Trío",
-    "Banda completa",
-    "Música para ceremonia",
-    "Producción técnica",
-    "Refuerzo sonoro",
-    "Renta de audio",
-    "Aún no estoy seguro",
+    "Ceremonia",
+    "Boda",
+    "Cumpleaños",
+    "Aniversario",
+    "Evento corporativo",
+    "Fiesta o reunión privada",
+    "Otro evento",
   ]) {
     assert.match(html, new RegExp(option));
   }
 
-  assert.match(html, /¿Qué necesitas\?/);
+  assert.match(html, /¿Para qué evento necesitas música\?/);
+  assert.match(html, /Selecciona el tipo de evento y cuéntanos qué tienes en mente\./);
   assert.match(html, /Continuar por WhatsApp/);
-  assert.doesNotMatch(html, /value="Royal Music"|value="AE Live Sessions"/);
+  assert.doesNotMatch(html, /Solista|Dúo|Trío|Banda completa|Producción técnica|Refuerzo sonoro|Renta de audio|Aún no estoy seguro/);
 });
 
 test("keeps each photographic context purposeful", async () => {

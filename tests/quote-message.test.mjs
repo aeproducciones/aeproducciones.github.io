@@ -11,8 +11,7 @@ function validDetails(overrides = {}) {
   return {
     name: "María 李",
     contact: "+34 612 345 678",
-    services: ["Solista", "Refuerzo sonoro"],
-    eventType: "Boda o celebración privada",
+    eventType: "Boda",
     date: "",
     location: "",
     details: "",
@@ -56,29 +55,24 @@ test("rejects empty, implausibly short or long, and non-phone contacts", () => {
   }
 });
 
-test("reports required fields in form order and accepts undecided service selection", () => {
+test("reports required fields in form order", () => {
   const errors = validateQuote(validDetails({
     name: "",
     contact: "",
-    services: [],
     eventType: "",
     consent: false,
   }));
   assert.deepEqual(quoteFieldOrder.filter((field) => errors[field]), [
-    "name", "contact", "services", "eventType", "consent",
+    "name", "contact", "eventType", "consent",
   ]);
-  assert.deepEqual(validateQuote(validDetails({
-    services: ["Aún no estoy seguro (ayúdenme a elegir)"],
-  })), {});
+  assert.deepEqual(validateQuote(validDetails()), {});
 });
 
-test("normalizes form text and includes every selected service", () => {
+test("normalizes form text and includes the selected event", () => {
   const data = new FormData();
   data.set("name", "  María   李  ");
   data.set("contact", "  +34 612 345 678  ");
-  data.set("eventType", "Boda o celebración privada");
-  data.append("services", "Solista");
-  data.append("services", "Refuerzo sonoro");
+  data.set("eventType", "Boda");
   data.set("date", "2026-12-05");
   data.set("location", "  Querétaro  ");
   data.set("details", "  Cena familiar\nCon terraza.  ");
@@ -93,10 +87,9 @@ test("normalizes form text and includes every selected service", () => {
     "",
     "Nombre: María 李",
     "Contacto: +34 612 345 678",
-    "Tipo de evento: Boda o celebración privada",
+    "Tipo de evento: Boda",
     "Fecha: 2026-12-05",
     "Sede: Querétaro",
-    "Necesidad: Solista, Refuerzo sonoro",
     "Detalles: Cena familiar\nCon terraza.",
   ].join("\n"));
 });
