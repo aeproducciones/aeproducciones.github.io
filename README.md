@@ -22,6 +22,11 @@ desbordamientos, imágenes rotas ni errores de consola observados.
 Comparaciones antes/después en `review/marca-agua-2026-09-22/`; manifiesto de los
 243 archivos en `review/publication-marca-agua-2026-09-22-manifest.json`.
 Los originales y CNAME se conservan; CRM, `main` e infraestructura quedan intactos.
+Publicación verificada: fuente `93e3ded`, artefacto `c09c2bd` y run
+[`35749618873`](https://github.com/aeproducciones/aeproducciones.github.io/actions/runs/35749618873)
+con resultado `success` a las 15:47:17 UTC. En el dominio, 73/73 URL respondieron
+HTTP 200 con bytes idénticos a `out/`; las 17 cabeceras mostraron la marca con
+opacidad 0.42, sin desbordamientos ni errores de consola observados.
 Para deshacer únicamente esta publicación, crear un nuevo commit estático con
 el árbol de `312942a`, publicar por avance normal y verificar el dominio.
 
