@@ -816,7 +816,28 @@ main:focus:not(:focus-visible) {
   margin-bottom: 0;
 }
 
-.page-hero-brand::before {
+/* Reuse the approved, decorative AE watermark across public page headers. */
+.home-hero,
+.page-hero,
+.connect-hero,
+.not-found {
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
+}
+
+.home-hero-grid,
+.page-hero-grid,
+.connect-hero > *,
+.not-found > * {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero-brand::before,
+.home-hero::before,
+.connect-hero::before,
+.not-found::before {
   background: url("/brand/ae-logo-dark.png") center / contain no-repeat;
   bottom: -24%;
   content: "";
@@ -826,6 +847,7 @@ main:focus:not(:focus-visible) {
   position: absolute;
   right: -8%;
   width: min(76vw, 980px);
+  z-index: 0;
 }
 
 .page-hero-logo {
@@ -1850,6 +1872,14 @@ main:focus:not(:focus-visible) {
 }
 
 @media (max-width: 800px) {
+  .home-hero::before,
+  .page-hero-media.page-hero-brand::before,
+  .connect-hero::before {
+    bottom: auto;
+    height: min(100%, 640px);
+    top: 0;
+  }
+
   body {
     padding-bottom: calc(64px + env(safe-area-inset-bottom));
   }

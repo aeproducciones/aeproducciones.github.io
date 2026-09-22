@@ -3,6 +3,28 @@
 Sitio oficial de AE Producciones: música en vivo, audio profesional,
 coordinación técnica y soluciones integrales para eventos.
 
+## Marca de agua AE en las cabeceras · 2026-09-22
+
+Adrián solicitó extender la marca oscura de Quiénes somos al resto de páginas.
+Rama fuente `codex/marca-agua-2026-09-22`, base `8c2ae4a`; publicación anterior
+`312942a12f2f0c2f218403d60f34ddf62c734917`.
+Se reutiliza `/brand/ae-logo-dark.png` con la opacidad original de 0.42 en las
+14 cabeceras PageHero, Inicio, Conecta y la pantalla 404. La raíz sigue redirigiendo
+a `/es/`. El logo es decorativo, no intercepta clics y queda detrás del contenido.
+En móvil, las cabeceras con fotos mantienen la marca en la zona del texto.
+Se conserva la marca existente del pie y no se repite en otras secciones oscuras.
+Textos, fotografías, radios de 10 px, logos, rutas y oferta comercial no cambian.
+
+Verificación: build público con tipos, lint y 19/19 pruebas correctos; revisión
+visual en emulación de 390, 820 y 1440 px. Las 17 cabeceras se comprobaron en
+navegador, junto con navegación y cierre/foco del menú mediante Escape, sin
+desbordamientos, imágenes rotas ni errores de consola observados.
+Comparaciones antes/después en `review/marca-agua-2026-09-22/`; manifiesto de los
+243 archivos en `review/publication-marca-agua-2026-09-22-manifest.json`.
+Los originales y CNAME se conservan; CRM, `main` e infraestructura quedan intactos.
+Para deshacer únicamente esta publicación, crear un nuevo commit estático con
+el árbol de `312942a`, publicar por avance normal y verificar el dominio.
+
 ## Fotografías redondeadas aprobadas · 2026-09-22
 
 Adrián aprobó la prueba visual y pidió aplicarla a todas las fotografías de la

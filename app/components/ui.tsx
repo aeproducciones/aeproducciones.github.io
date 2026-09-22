@@ -69,7 +69,7 @@ export function PageHero({
   imagePosition = "center",
   imageFit = "cover",
   logo,
-  brandBackdrop = false,
+  brandBackdrop = true,
 }: {
   label: string;
   title: string;

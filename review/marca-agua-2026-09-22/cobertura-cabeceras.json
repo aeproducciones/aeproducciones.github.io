@@ -1,0 +1,172 @@
+[
+  {
+    "broken": 0,
+    "decorative": true,
+    "exists": true,
+    "heading": "Música en vivo. Producción. Audio profesional.",
+    "image": "url(\"http://127.0.0.1:4181/brand/ae-logo-dark.png\")",
+    "opacity": "0.42",
+    "overflow": false,
+    "route": "/es/"
+  },
+  {
+    "broken": 0,
+    "decorative": true,
+    "exists": true,
+    "heading": "Quiénes somos.",
+    "image": "url(\"http://127.0.0.1:4181/brand/ae-logo-dark.png\")",
+    "opacity": "0.42",
+    "overflow": false,
+    "route": "/es/nosotros/"
+  },
+  {
+    "broken": 0,
+    "decorative": true,
+    "exists": true,
+    "heading": "Una visión completa del escenario.",
+    "image": "url(\"http://127.0.0.1:4181/brand/ae-logo-dark.png\")",
+    "opacity": "0.42",
+    "overflow": false,
+    "route": "/es/portafolio/"
+  },
+  {
+    "broken": 0,
+    "decorative": true,
+    "exists": true,
+    "heading": "Atmósferas musicales reales.",
+    "image": "url(\"http://127.0.0.1:4181/brand/ae-logo-dark.png\")",
+    "opacity": "0.42",
+    "overflow": false,
+    "route": "/es/royal-music/"
+  },
+  {
+    "broken": 0,
+    "decorative": true,
+    "exists": true,
+    "heading": "Minimalista, claro y con presencia real.",
+    "image": "url(\"http://127.0.0.1:4181/brand/ae-logo-dark.png\")",
+    "opacity": "0.42",
+    "overflow": false,
+    "route": "/es/royal-music/solista/"
+  },
+  {
+    "broken": 0,
+    "decorative": true,
+    "exists": true,
+    "heading": "Sonido claro, moderno y bien definido.",
+    "image": "url(\"http://127.0.0.1:4181/brand/ae-logo-dark.png\")",
+    "opacity": "0.42",
+    "overflow": false,
+    "route": "/es/royal-music/royal-trio/"
+  },
+  {
+    "broken": 0,
+    "decorative": true,
+    "exists": true,
+    "heading": "Un ensamble amplio, adaptable y con mayor profundidad sonora.",
+    "image": "url(\"http://127.0.0.1:4181/brand/ae-logo-dark.png\")",
+    "opacity": "0.42",
+    "overflow": false,
+    "route": "/es/royal-music/unplugged/"
+  },
+  {
+    "broken": 0,
+    "decorative": true,
+    "exists": true,
+    "heading": "Un resultado estable, claro y profesional.",
+    "image": "url(\"http://127.0.0.1:4181/brand/ae-logo-dark.png\")",
+    "opacity": "0.42",
+    "overflow": false,
+    "route": "/es/servicios/"
+  },
+  {
+    "broken": 0,
+    "decorative": true,
+    "exists": true,
+    "heading": "Cada presentación se adapta al entorno.",
+    "image": "url(\"http://127.0.0.1:4181/brand/ae-logo-dark.png\")",
+    "opacity": "0.42",
+    "overflow": false,
+    "route": "/es/soluciones/"
+  },
+  {
+    "broken": 0,
+    "decorative": true,
+    "exists": true,
+    "heading": "Música para cada momento.",
+    "image": "url(\"http://127.0.0.1:4181/brand/ae-logo-dark.png\")",
+    "opacity": "0.42",
+    "overflow": false,
+    "route": "/es/soluciones/bodas/"
+  },
+  {
+    "broken": 0,
+    "decorative": true,
+    "exists": true,
+    "heading": "Presencia, sonido y adaptación.",
+    "image": "url(\"http://127.0.0.1:4181/brand/ae-logo-dark.png\")",
+    "opacity": "0.42",
+    "overflow": false,
+    "route": "/es/soluciones/hoteles/"
+  },
+  {
+    "broken": 0,
+    "decorative": true,
+    "exists": true,
+    "heading": "Una atmósfera cercana y bien construida.",
+    "image": "url(\"http://127.0.0.1:4181/brand/ae-logo-dark.png\")",
+    "opacity": "0.42",
+    "overflow": false,
+    "route": "/es/soluciones/restaurantes/"
+  },
+  {
+    "broken": 0,
+    "decorative": true,
+    "exists": true,
+    "heading": "Claridad musical y técnica.",
+    "image": "url(\"http://127.0.0.1:4181/brand/ae-logo-dark.png\")",
+    "opacity": "0.42",
+    "overflow": false,
+    "route": "/es/soluciones/eventos-corporativos/"
+  },
+  {
+    "broken": 0,
+    "decorative": true,
+    "exists": true,
+    "heading": "Música en vivo. Producción. Audio profesional.",
+    "image": "url(\"http://127.0.0.1:4181/brand/ae-logo-dark.png\")",
+    "opacity": "0.42",
+    "overflow": false,
+    "route": "/conecta/"
+  },
+  {
+    "broken": 0,
+    "decorative": true,
+    "exists": true,
+    "heading": "Definir los puntos esenciales.",
+    "image": "url(\"http://127.0.0.1:4181/brand/ae-logo-dark.png\")",
+    "opacity": "0.42",
+    "overflow": false,
+    "route": "/es/solicitar-propuesta/"
+  },
+  {
+    "broken": 0,
+    "decorative": true,
+    "exists": true,
+    "heading": "Información sobre el contacto.",
+    "image": "url(\"http://127.0.0.1:4181/brand/ae-logo-dark.png\")",
+    "opacity": "0.42",
+    "overflow": false,
+    "route": "/es/aviso-de-privacidad/"
+  },
+  {
+    "broken": 0,
+    "decorative": true,
+    "exists": true,
+    "heading": "Página no disponible.",
+    "image": "url(\"http://127.0.0.1:4181/brand/ae-logo-dark.png\")",
+    "opacity": "0.42",
+    "overflow": false,
+    "route": "/404.html"
+  }
+]
