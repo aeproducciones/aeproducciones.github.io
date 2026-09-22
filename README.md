@@ -25,6 +25,15 @@ El manifiesto `review/publication-fotos-2026-09-22-manifest.json` registra los
 SHA-256 de los 243 archivos del despliegue. Se conserva CNAME y no se modifican
 CRM, `main`, workflows, permisos ni infraestructura.
 
+Publicación completada: fuente `f518bdb`, commit público `312942a`, run
+[`35747608668`](https://github.com/aeproducciones/aeproducciones.github.io/actions/runs/35747608668)
+con resultado `success` a las 15:30:12 UTC. El commit público conserva el árbol
+de `f10f17e`; sólo añadió la activación del despliegue tras el primer push.
+Comprobación del dominio: 73/73 URL con HTTP 200 y bytes idénticos a `out/`.
+En navegador se verificaron las 44 instancias fotográficas en las 14 rutas
+publicadas: todas con 10 px, logotipos sin redondeado, sin desbordamientos ni
+errores de consola observados. El nuevo título de Quiénes somos está publicado.
+
 Para deshacer esta publicación, crear un nuevo commit en `site-production`
 con el árbol de `1270dae301680ad4fb8507aebd29622de7172dca`, publicar mediante
 avance normal y verificar Pages y el dominio. No usar force push. Las capturas
