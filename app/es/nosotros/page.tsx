@@ -28,7 +28,7 @@ export default function AboutPage() {
         <div className="container about-definition-intro">
           <div>
             <p className="eyebrow">Quiénes somos</p>
-            <h2>Música en vivo y soluciones de audio con un enfoque profesional.</h2>
+            <h2>Un proyecto nacido por la pasión a la música</h2>
           </div>
           <p className="large-copy">
             Integramos experiencia directa en escenarios, grabación, mezcla,

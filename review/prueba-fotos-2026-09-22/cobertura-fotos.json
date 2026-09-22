@@ -1,0 +1,124 @@
+[
+  {
+    "broken": 0,
+    "logoRadii": [
+      "0px"
+    ],
+    "missing": 0,
+    "overflow": false,
+    "photos": 12,
+    "route": "/es/"
+  },
+  {
+    "broken": 0,
+    "logoRadii": [],
+    "missing": 0,
+    "overflow": false,
+    "photos": 1,
+    "route": "/es/nosotros/"
+  },
+  {
+    "broken": 0,
+    "logoRadii": [],
+    "missing": 0,
+    "overflow": false,
+    "photos": 13,
+    "route": "/es/portafolio/"
+  },
+  {
+    "broken": 0,
+    "logoRadii": [
+      "0px"
+    ],
+    "missing": 0,
+    "overflow": false,
+    "photos": 4,
+    "route": "/es/royal-music/"
+  },
+  {
+    "broken": 0,
+    "logoRadii": [
+      "0px"
+    ],
+    "missing": 0,
+    "overflow": false,
+    "photos": 1,
+    "route": "/es/royal-music/solista/"
+  },
+  {
+    "broken": 0,
+    "logoRadii": [
+      "0px"
+    ],
+    "missing": 0,
+    "overflow": false,
+    "photos": 1,
+    "route": "/es/royal-music/royal-trio/"
+  },
+  {
+    "broken": 0,
+    "logoRadii": [
+      "0px"
+    ],
+    "missing": 0,
+    "overflow": false,
+    "photos": 1,
+    "route": "/es/royal-music/unplugged/"
+  },
+  {
+    "broken": 0,
+    "logoRadii": [],
+    "missing": 0,
+    "overflow": false,
+    "photos": 2,
+    "route": "/es/servicios/"
+  },
+  {
+    "broken": 0,
+    "logoRadii": [],
+    "missing": 0,
+    "overflow": false,
+    "photos": 4,
+    "route": "/es/soluciones/"
+  },
+  {
+    "broken": 0,
+    "logoRadii": [],
+    "missing": 0,
+    "overflow": false,
+    "photos": 1,
+    "route": "/es/soluciones/bodas/"
+  },
+  {
+    "broken": 0,
+    "logoRadii": [],
+    "missing": 0,
+    "overflow": false,
+    "photos": 1,
+    "route": "/es/soluciones/hoteles/"
+  },
+  {
+    "broken": 0,
+    "logoRadii": [],
+    "missing": 0,
+    "overflow": false,
+    "photos": 1,
+    "route": "/es/soluciones/restaurantes/"
+  },
+  {
+    "broken": 0,
+    "logoRadii": [],
+    "missing": 0,
+    "overflow": false,
+    "photos": 1,
+    "route": "/es/soluciones/eventos-corporativos/"
+  },
+  {
+    "broken": 0,
+    "logoRadii": [],
+    "missing": 0,
+    "overflow": false,
+    "photos": 1,
+    "route": "/conecta/"
+  }
+]

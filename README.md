@@ -3,6 +3,33 @@
 Sitio oficial de AE Producciones: música en vivo, audio profesional,
 coordinación técnica y soluciones integrales para eventos.
 
+## Fotografías redondeadas aprobadas · 2026-09-22
+
+Adrián aprobó la prueba visual y pidió aplicarla a todas las fotografías de la
+web. Rama fuente `codex/prueba-fotos-2026-09-22`, base `845de5f`; artefacto público
+anterior `1270dae301680ad4fb8507aebd29622de7172dca`.
+Una regla compartida de 10 px cubre las 44 instancias fotográficas de 14 páginas,
+incluido el retrato de `/conecta/`. Los archivos originales, encuadres,
+logotipos, enlaces y rutas se conservan. En Quiénes somos, el título pasa a
+«Un proyecto nacido por la pasión a la música», según el texto del usuario.
+La prueba existente de radios admite esta única regla compartida de 10 px.
+
+Verificación: build público (incluidos tipos), lint y 19/19 pruebas correctos.
+Revisión visual con emulación de 390, 820 y aproximadamente 1440 px. Se verificó
+en navegador la cobertura de las 44 fotografías: radio de 10 px y recorte
+del contenedor, sin desbordamientos ni imágenes rotas observados; logotipos
+sin redondeado y consola sin errores. Capturas antes/después de Quiénes somos,
+Evidencia y Conecta en
+[`review/prueba-fotos-2026-09-22/`](review/prueba-fotos-2026-09-22/).
+El manifiesto `review/publication-fotos-2026-09-22-manifest.json` registra los
+SHA-256 de los 243 archivos del despliegue. Se conserva CNAME y no se modifican
+CRM, `main`, workflows, permisos ni infraestructura.
+
+Para deshacer esta publicación, crear un nuevo commit en `site-production`
+con el árbol de `1270dae301680ad4fb8507aebd29622de7172dca`, publicar mediante
+avance normal y verificar Pages y el dominio. No usar force push. Las capturas
+y simuladores locales quedan fuera de `out/`.
+
 ## Publicación aprobada · 2026-09-22
 
 Adrián autorizó aplicar las mejoras a la página pública el 22 de septiembre.

@@ -210,7 +210,7 @@ test("keeps the approved monochrome and performance budgets", async () => {
   );
   assert.deepEqual(
     radii.filter((value) => value !== "0"),
-    [],
+    ["10px"], // One shared radius for the approved photograph treatment.
   );
   const approved = new Set([
     "#000000",

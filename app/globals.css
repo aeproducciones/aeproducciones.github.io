@@ -2275,6 +2275,26 @@ main:focus:not(:focus-visible) {
   }
 }
 
+/* Round photo containers while preserving logos and their original geometry. */
+.page-hero-image,
+.market-tile figure,
+.format-card figure:not(.brand-card-visual),
+.royal-index figure:not(.brand-card-visual),
+.solution-index figure,
+.production-preview,
+.evidence-strip figure,
+.technical-evidence-grid figure,
+.profile-grid figure,
+.portfolio-grid figure > div,
+.connect-hero figure {
+  border-radius: 10px;
+}
+
+.page-hero-image,
+.connect-hero figure {
+  overflow: hidden;
+}
+
 /* Photography surfaces: keep the image itself free of framing treatments. */
 .home-hero-image,
 .page-hero-image,
