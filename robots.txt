@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://produccionesae.com/sitemap.xml
