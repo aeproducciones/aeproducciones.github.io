@@ -26,6 +26,19 @@ Son 243 archivos públicos; `review/publication-2026-09-22-manifest.json` regist
 sus SHA-256. No se publican código fuente, revisiones, simuladores ni rutas del CRM.
 No se cambian DNS, permisos, workflows, secretos ni `main`.
 
+Publicación completada: fuente `55117983de97f43c2fe4583e28cc9a10cb7e469f`,
+artefacto `1270dae301680ad4fb8507aebd29622de7172dca` y run
+[`35741074087`](https://github.com/aeproducciones/aeproducciones.github.io/actions/runs/35741074087)
+con resultado `success` el 22 de septiembre a las 14:35:48 UTC.
+La comprobación del dominio obtuvo 71/71 respuestas HTTP 200 con contenido
+idéntico a la exportación: 17 páginas y 54 recursos, incluidos sitemap, CSS,
+JavaScript, logos, fotos, imagen social y PDF. En navegador, con emulación de
+390 y 1440 píxeles, se verificaron inicio, navegación al formulario, recarga,
+cierre del menú al navegar y con Escape, retorno del foco y validación de campos
+vacíos. Sin desbordamientos ni errores de consola observados. No se enviaron
+mensajes reales. `main` continúa en `806ddeb7df837e3d9ec4922c730997855a16ce26`
+y los cinco cambios locales del checkout original permanecen intactos.
+
 El anterior árbol de `site-production` (`d0ff5f7`) incluía Royal Ceremony y otra
 oferta que no coincidían con la versión visible antes de publicar. Por eso no se
 superponen archivos antiguos ni se usa un simple revert a ese árbol como rollback.
