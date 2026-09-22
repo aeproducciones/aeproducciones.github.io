@@ -3,6 +3,20 @@
 Sitio oficial de AE Producciones: música en vivo, audio profesional,
 coordinación técnica y soluciones integrales para eventos.
 
+## Cobertura en todo México · 2026-09-22
+
+Por instrucción de Adrián se sustituye la lista de ciudades por «En todo México.»
+en el valor compartido de cobertura: inicio y pie de las 15 páginas en español.
+Se conserva «Querétaro · México» como ubicación de origen. Rama fuente
+`codex/cobertura-mexico-2026-09-22`, base `4068f8b`; publicación anterior `b84e32b`.
+Build público con tipos, lint y 19/19 pruebas correctos; revisión en emulación
+de 390 y 1441 px sin desbordamientos ni errores de consola. Capturas en
+`review/cobertura-mexico-2026-09-22/`; manifiesto de 243 archivos públicos en
+`review/publication-cobertura-mexico-2026-09-22-manifest.json`.
+Para deshacer sólo esta publicación, crear un commit estático con el árbol de
+`b84e32b`, publicar por avance normal y verificar el dominio. CRM, `main`,
+imágenes, estilos, rutas, CNAME e infraestructura se conservan.
+
 ## Royal Music integrado en el inicio · 2026-09-22
 
 Adrián pidió mostrar sólo las letras de Royal Music, sin recuadro, y retirar

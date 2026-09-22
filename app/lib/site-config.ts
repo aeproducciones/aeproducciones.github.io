@@ -5,8 +5,7 @@ export const siteConfig = {
   whatsappDisplay: "442 711 1671",
   email: "aeproduccionesoficial@gmail.com",
   instagram: "@adrian.eugenio33",
-  coverage:
-    "Querétaro, San Miguel de Allende, Celaya, Guanajuato, León, San Luis Potosí y Ciudad de México.",
+  coverage: "En todo México.",
 } as const;
 
 export function whatsappUrl(message: string) {
