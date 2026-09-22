@@ -19,6 +19,15 @@ sin marca de agua ni capa sobre el logo, sin desbordamientos ni errores de conso
 Se comprobó la marca intacta en Nosotros, Royal Music y Conecta. Comparaciones
 en `review/royal-inicio-2026-09-22/`; manifiesto de los 243 archivos públicos en
 `review/publication-royal-inicio-2026-09-22-manifest.json`.
+Publicación verificada: fuente `cb39cb9`, artefacto `b84e32b` y run
+[`35751232995`](https://github.com/aeproducciones/aeproducciones.github.io/actions/runs/35751232995)
+con resultado `success` a las 16:01:36 UTC. En el dominio, 72/72 URL respondieron
+HTTP 200 con bytes idénticos al paquete aprobado de 243 archivos. Inicio comprobado
+en navegador con emulación de 391 y 1440 px, imagen cargada, fondo transparente,
+sin marca AE en la cabecera, desbordamientos ni errores de consola observados.
+El paquete se preparó a partir del manifiesto verificado; las copias locales
+con sufijo « 2» aparecidas después del build se conservaron y no se publicaron.
+
 Para deshacer este ajuste, publicar mediante avance normal un commit estático
 con el árbol de `c09c2bd` y verificar Pages y el dominio. CRM, `main`, rutas,
 CNAME e infraestructura permanecen intactos.
