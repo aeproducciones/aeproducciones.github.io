@@ -1,2 +1,2 @@
-:HL["/_next/static/css/d18140b431582c9c.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"conecta","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"pfXG5O4ZWZlQUm2LNrdpK"}
+:HL["/_next/static/css/e755a61d1217d13d.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"conecta","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"2q9uECd2PIvmuMpVLYnih"}
