@@ -33,7 +33,15 @@ observados en formulario y privacidad. No se probaron dispositivos físicos.
 Se corrigió también la repetición del fragmento al volver a pulsar «Ir al
 formulario»: las anclas internas usan navegación HTML nativa. Dos clics
 consecutivos llevan a `#propuesta` sin duplicarlo.
-Análisis de código (ESLint): correcto. Publicación: pendiente de completar.
+Análisis de código (ESLint): correcto. Fuente local `a6f16a7`; artefacto estático
+local `174cd3248c775650c1a2ea610e23fb37353dca55`, preparado con padre `01afff8`.
+No se publicó: la revisión automática rechazó el push de la rama fuente por
+la prohibición inicial de push/merge/despliegue. Se solicitó autorización
+explícita para subir la revisión y publicar esta corrección; no se intentó
+el push del artefacto. Vista previa local disponible, mientras el servidor
+siga activo, en `http://127.0.0.1:4186/es/solicitar-propuesta/`.
+Se inicia con `node scripts/preview-public.mjs --port 4186 --simulate-whatsapp`
+después de `npm run build:pages`. La simulación sólo existe en el servidor local.
 Manifiesto de 243 archivos en
 `review/publication-formulario-2026-09-26-manifest.json`; los 40 archivos
 de CNAME, logos y fotografías permanecen idénticos a la publicación anterior.
