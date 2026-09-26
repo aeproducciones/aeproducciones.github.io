@@ -35,11 +35,15 @@ formulario»: las anclas internas usan navegación HTML nativa. Dos clics
 consecutivos llevan a `#propuesta` sin duplicarlo.
 Análisis de código (ESLint): correcto. Fuente local `a6f16a7`; artefacto estático
 local `174cd3248c775650c1a2ea610e23fb37353dca55`, preparado con padre `01afff8`.
-No se publicó: la revisión automática rechazó el push de la rama fuente por
-la prohibición inicial de push/merge/despliegue. Se solicitó autorización
-explícita para subir la revisión y publicar esta corrección; no se intentó
-el push del artefacto. Vista previa local disponible, mientras el servidor
-siga activo, en `http://127.0.0.1:4186/es/solicitar-propuesta/`.
+Adrián autorizó explícitamente subir la revisión y publicar estas correcciones
+después del bloqueo inicial de revisión automática. Publicación completada por
+avance normal en `site-production`: artefacto `174cd32`, run
+[`36253421771`](https://github.com/aeproducciones/aeproducciones.github.io/actions/runs/36253421771)
+con resultado `success` el 26 de septiembre a las 15:52:22 UTC. Formulario,
+privacidad y CSS del dominio respondieron HTTP 200 con bytes idénticos al
+paquete verificado. Se confirmó el nuevo formulario en el navegador público.
+Vista previa local disponible, mientras el servidor siga activo, en
+`http://127.0.0.1:4186/es/solicitar-propuesta/`.
 Se inicia con `node scripts/preview-public.mjs --port 4186 --simulate-whatsapp`
 después de `npm run build:pages`. La simulación sólo existe en el servidor local.
 Manifiesto de 243 archivos en
