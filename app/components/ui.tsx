@@ -33,6 +33,14 @@ export function ActionLink({
     );
   }
 
+  if (action.href.startsWith("#")) {
+    return (
+      <a className={className} href={action.href}>
+        {action.label}
+      </a>
+    );
+  }
+
   return (
     <Link className={className} href={action.href}>
       {action.label}

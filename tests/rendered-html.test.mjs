@@ -164,6 +164,23 @@ test("presents the quote form in client-facing language", async () => {
   assert.doesNotMatch(html, /Solista|Dúo|Trío|Banda completa|Producción técnica|Refuerzo sonoro|Renta de audio|Aún no estoy seguro/);
 });
 
+test("opens privacy separately and explains when a request is sent", async () => {
+  const quoteHtml = await (await render("/es/solicitar-propuesta")).text();
+  const privacyLink = [...quoteHtml.matchAll(/<a\b[^>]*>/g)]
+    .map((match) => match[0])
+    .find((anchor) => /href="\/es\/aviso-de-privacidad\/"/.test(anchor)
+      && /target="_blank"/.test(anchor));
+  assert.ok(privacyLink, "reading privacy keeps the original form open");
+  assert.match(privacyLink, /rel="noopener noreferrer"/);
+  assert.match(quoteHtml, /id="privacy-link-help"/);
+  assert.match(quoteHtml, /pulsa Enviar en/);
+
+  const privacyHtml = await (await render("/es/aviso-de-privacidad")).text();
+  assert.doesNotMatch(privacyHtml, /Pendiente:|WhatsApp y correo|canal elegido/);
+  assert.match(privacyHtml, /no envía el mensaje por sí solo/);
+  assert.match(privacyHtml, /href="\/es\/solicitar-propuesta\/#propuesta"/);
+});
+
 test("keeps each photographic context purposeful", async () => {
   const contextualRoutes = [
     "/es",

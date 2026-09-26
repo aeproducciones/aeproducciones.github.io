@@ -1296,6 +1296,7 @@ main:focus:not(:focus-visible) {
   display: grid;
   gap: clamp(2.5rem, 6vw, 6rem);
   grid-template-columns: minmax(0, 0.6fr) minmax(0, 1.4fr);
+  align-items: start;
 }
 
 .quote-layout > *,
@@ -1307,6 +1308,12 @@ main:focus:not(:focus-visible) {
   align-self: start;
   position: sticky;
   top: 130px;
+}
+
+.quote-context h2 {
+  font-size: clamp(1.9rem, 2.8vw, 2.75rem);
+  line-height: 1.15;
+  max-width: 16ch;
 }
 
 .quote-context > a {
@@ -1322,9 +1329,24 @@ main:focus:not(:focus-visible) {
 }
 
 .form-grid {
+  align-items: start;
   display: grid;
-  gap: 1.25rem;
+  gap: 1.5rem 1.25rem;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.quote-field {
+  display: block;
+  min-width: 0;
+}
+
+.quote-field > label,
+.quote-field > span {
+  display: block;
+}
+
+.quote-field .form-help {
+  margin: 0.5rem 0 0;
 }
 
 .form-wide {
@@ -1357,7 +1379,6 @@ main:focus:not(:focus-visible) {
 }
 
 .quote-form textarea {
-  margin-bottom: 1.5rem;
   resize: vertical;
 }
 
@@ -1482,6 +1503,7 @@ main:focus:not(:focus-visible) {
   display: flex;
   gap: 0.8rem;
   min-height: 44px;
+  margin-top: 1.75rem;
 }
 
 .consent > span {
@@ -1491,6 +1513,10 @@ main:focus:not(:focus-visible) {
 .consent a {
   text-decoration: underline;
   text-underline-offset: 0.2em;
+}
+
+.privacy-link-help {
+  margin: 0.4rem 0 1.25rem 1.925rem;
 }
 
 .privacy-note,
@@ -1503,6 +1529,10 @@ main:focus:not(:focus-visible) {
   margin-top: 1rem;
 }
 
+.form-status:empty {
+  margin: 0;
+}
+
 /* Legal */
 
 .legal-copy {
@@ -1512,6 +1542,10 @@ main:focus:not(:focus-visible) {
 .legal-copy h2 {
   font-size: clamp(1.8rem, 3vw, 2.7rem);
   margin-top: 4rem;
+}
+
+.legal-copy > h2:first-child {
+  margin-top: 0;
 }
 
 .legal-copy a {

@@ -84,10 +84,10 @@ export function QuoteForm() {
     >
       <p className="form-intro" id="quote-form-intro">
         Los campos marcados como obligatorios permiten preparar tu mensaje.
-        Podrás revisarlo antes de enviarlo en WhatsApp.
+        Al continuar, se abrirá una conversación con AE Producciones en WhatsApp.
       </p>
       <div className="form-grid">
-        <div>
+        <div className="quote-field">
           <label htmlFor="quote-name">
             <span>Nombre completo · obligatorio</span>
           </label>
@@ -105,7 +105,7 @@ export function QuoteForm() {
             </p>
           ) : null}
         </div>
-        <div>
+        <div className="quote-field">
           <label htmlFor="quote-contact">
             <span>WhatsApp · obligatorio</span>
           </label>
@@ -129,16 +129,10 @@ export function QuoteForm() {
             </p>
           ) : null}
         </div>
-      </div>
-
-      <div className="form-grid form-event-grid">
-        <div>
+        <div className="quote-field form-wide">
           <label htmlFor="quote-event-type">
             <span>¿Para qué evento necesitas música? · obligatorio</span>
           </label>
-          <p className="form-help" id="event-type-help">
-            Selecciona el tipo de evento y cuéntanos qué tienes en mente.
-          </p>
           <select
             id="quote-event-type"
             name="eventType"
@@ -158,30 +152,32 @@ export function QuoteForm() {
             <option>Fiesta o reunión privada</option>
             <option>Otro evento</option>
           </select>
+          <p className="form-help" id="event-type-help">
+            Selecciona el tipo de evento y cuéntanos qué tienes en mente.
+          </p>
           {errors.eventType ? (
             <p className="form-error" id="event-type-error">
               {errors.eventType}
             </p>
           ) : null}
         </div>
-        <label>
+        <label className="quote-field">
           <span>Fecha · opcional</span>
           <input name="date" type="date" />
         </label>
-        <label className="form-wide">
+        <label className="quote-field">
           <span>Sede o ciudad · opcional</span>
           <input name="location" placeholder="Puede quedar por definir" />
         </label>
+        <label className="quote-field form-wide">
+          <span>Detalles o requerimientos adicionales · opcional</span>
+          <textarea
+            name="details"
+            rows={5}
+            placeholder="Comparte únicamente lo que ya tengas definido"
+          />
+        </label>
       </div>
-
-      <label>
-        <span>Detalles o requerimientos adicionales · opcional</span>
-        <textarea
-          name="details"
-          rows={5}
-          placeholder="Comparte únicamente lo que ya tengas definido"
-        />
-      </label>
 
       <label className="consent">
         <input
@@ -189,14 +185,25 @@ export function QuoteForm() {
           type="checkbox"
           required
           aria-invalid={Boolean(errors.consent)}
-          aria-describedby={errors.consent ? "consent-error" : undefined}
+          aria-describedby={`privacy-link-help${errors.consent ? " consent-error" : ""}`}
         />
         <span>
           He leído la{" "}
-          <Link href="/es/aviso-de-privacidad">información de privacidad</Link>.
+          <Link
+            href="/es/aviso-de-privacidad/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-describedby="privacy-link-help"
+          >
+            información de privacidad
+          </Link>.
           {" "}(Obligatorio)
         </span>
       </label>
+      <p className="form-help privacy-link-help" id="privacy-link-help">
+        La información de privacidad se abre en otra pestaña para que conserves
+        lo que estás llenando.
+      </p>
       {errors.consent ? (
         <p className="form-error" id="consent-error">
           {errors.consent}
@@ -204,8 +211,8 @@ export function QuoteForm() {
       ) : null}
 
       <p className="privacy-note">
-        El sitio no almacena estos campos. Al continuar, se abrirá WhatsApp
-        con el mensaje preparado para que lo revises y confirmes su envío.
+        El sitio no almacena estos campos. Revisa el mensaje y pulsa Enviar en
+        WhatsApp para que AE Producciones reciba tu solicitud.
       </p>
       <button className="button button-dark form-submit" type="submit">
         Continuar por WhatsApp

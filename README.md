@@ -3,6 +3,45 @@
 Sitio oficial de AE Producciones: música en vivo, audio profesional,
 coordinación técnica y soluciones integrales para eventos.
 
+## Formulario y privacidad · 2026-09-26
+
+Se corrige la distribución señalada por Adrián en sus capturas: una sola
+cuadrícula alinea nombre y WhatsApp, da una fila completa al tipo de evento,
+agrupa fecha y sede, y separa los detalles y la confirmación de lectura.
+El título lateral tiene una proporción menor; la identidad y los campos
+aprobados se conservan. Rama `codex/formulario-privacidad-2026-09-26`, base
+`7eb4eb690d2e19ecadc03d51f2fb1ce78775e248`; publicación anterior
+`01afff81cab8d93b7e7303f16ee209f27be92a80`.
+
+Privacidad se abre en otra pestaña para conservar el formulario original.
+Se retira la nota interna «Pendiente» y se explica el comportamiento existente:
+los campos preparan un mensaje destinado a `+52 442 711 1671`; sólo al pulsar
+Enviar en WhatsApp se entrega a AE Producciones. El sitio no registra prospectos
+ni envía correo. No se modifica el mecanismo de contacto ni el CRM.
+La página contiene información operativa; sigue pendiente la preparación y
+revisión profesional del aviso formal, sin inventar datos del responsable,
+plazos o afirmaciones de validez legal.
+
+Capturas comparables y comprobaciones de esta intervención en
+`review/formulario-2026-09-26/`. Compilación pública con tipos y 20/20 pruebas
+correctas. Revisión visual en Chrome con emulación de 390, 820, 1024 y 1440 px,
+sin desbordamientos observados; validación de los cuatro datos obligatorios,
+foco en el primer error, privacidad en otra pestaña sin perder el formulario,
+mensaje completo y enlace alternativo comprobados con datos ficticios y
+WhatsApp interceptado. No se enviaron mensajes reales. Sin errores de consola
+observados en formulario y privacidad. No se probaron dispositivos físicos.
+Se corrigió también la repetición del fragmento al volver a pulsar «Ir al
+formulario»: las anclas internas usan navegación HTML nativa. Dos clics
+consecutivos llevan a `#propuesta` sin duplicarlo.
+Análisis de código (ESLint): correcto. Publicación: pendiente de completar.
+Manifiesto de 243 archivos en
+`review/publication-formulario-2026-09-26-manifest.json`; los 40 archivos
+de CNAME, logos y fotografías permanecen idénticos a la publicación anterior.
+Para deshacer únicamente esta publicación, crear un nuevo commit estático con
+el árbol de `01afff8` y publicar mediante avance normal, sin force push ni cambios
+en `main`, CNAME o configuración de Pages. El cambio fuente puede revertirse
+con un commit inverso limitado a esta intervención.
+
 ## Cobertura en todo México · 2026-09-22
 
 Por instrucción de Adrián se sustituye la lista de ciudades por «En todo México.»
