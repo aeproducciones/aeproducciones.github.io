@@ -16,8 +16,6 @@ const primaryLinks = [
 ] as const;
 
 export function SiteHeader() {
-  const reserveUrl = whatsappUrl(whatsappMessages.general);
-
   return (
     <header className="site-header">
       <div className="header-inner">
@@ -40,17 +38,13 @@ export function SiteHeader() {
           ))}
           <a
             className="button button-dark button-small"
-            href={reserveUrl}
-            target="_blank"
-            rel="noreferrer"
-            data-track="whatsapp_click"
-            data-location="header"
+            href="/es/solicitar-propuesta/#propuesta"
           >
-            Reserva
+            Cotiza
           </a>
         </nav>
 
-        <MobileMenu links={primaryLinks} reserveUrl={reserveUrl} />
+        <MobileMenu links={primaryLinks} />
       </div>
     </header>
   );
@@ -122,13 +116,9 @@ export function MobileDock() {
     <nav className="mobile-dock" aria-label="Acciones de contacto">
       <Link href="/es/solicitar-propuesta">Propuesta</Link>
       <a
-        href={whatsappUrl(whatsappMessages.general)}
-        target="_blank"
-        rel="noreferrer"
-        data-track="whatsapp_click"
-        data-location="sticky_mobile"
+        href="/es/solicitar-propuesta/#propuesta"
       >
-        Reserva
+        Cotiza
       </a>
     </nav>
   );

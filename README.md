@@ -3,6 +3,15 @@
 Sitio oficial de AE Producciones: música en vivo, audio profesional,
 coordinación técnica y soluciones integrales para eventos.
 
+## Botón Cotiza · 2026-09-26
+
+Por petición de Adrián, los botones «Reserva» de cabecera, menú móvil y barra
+móvil pasan a «Cotiza» y abren `/es/solicitar-propuesta/#propuesta` en la misma
+pestaña. Cambio limitado a esos botones; se conserva el contacto directo del
+pie. Rama `codex/cotiza-formulario-2026-09-26`, base `6af3ae5`; compilación pública
+con tipos correcta. Publicación anterior: `174cd32`, cuyo árbol permite revertir
+únicamente esta entrega mediante un nuevo commit, sin force push.
+
 ## Formulario y privacidad · 2026-09-26
 
 Se corrige la distribución señalada por Adrián en sus capturas: una sola

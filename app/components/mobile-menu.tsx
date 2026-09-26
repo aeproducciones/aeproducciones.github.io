@@ -6,10 +6,8 @@ import { useEffect, useRef } from "react";
 
 export function MobileMenu({
   links,
-  reserveUrl,
 }: {
   links: ReadonlyArray<{ href: string; label: string }>;
-  reserveUrl: string;
 }) {
   const details = useRef<HTMLDetailsElement>(null);
   const focusContentOnNavigation = useRef(false);
@@ -91,8 +89,8 @@ export function MobileMenu({
             {link.label}
           </Link>
         ))}
-        <a href={reserveUrl} target="_blank" rel="noreferrer" onClick={() => closeForLink(reserveUrl)}>
-          Reserva
+        <a href="/es/solicitar-propuesta/#propuesta" onClick={() => closeForLink("/es/solicitar-propuesta/#propuesta")}>
+          Cotiza
         </a>
       </nav>
     </details>
